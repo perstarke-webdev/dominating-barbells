@@ -7,13 +7,13 @@ github: metadata
 
 # Site Settings
 locale          : "de"
-title           : "Per Starke Web Development"
+title           : "Dominating Barbells"
 title_separator : "-"
 name            : ""
-description     : "Web Development for you"
-url             : "https://perstarke-webdev.de" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+description     : ""
+url             : "" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl         : ""  # the subpath of your site, e.g. "/blog"
-repository      : "perstarke-webdev/perstarke-webdev.de-site" # GitHub username/repo-name
+repository      : "" # GitHub username/repo-name
 teaser          :  # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 breadcrumbs     : false # true, false (default)
 words_per_minute : 200
@@ -38,13 +38,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Per Starke"
-  avatar           :  /images/avatar.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  name             :
+  avatar           :
   bio              :
-  location         : "Köln"
-  email            : info@perstarke-webdev.de
+  location         :
+  email            :
   uri              :
-  github           : Per-Starke
+  github           :
   stack_overflow   :
   twitter          :
   xing             : 

@@ -1,21 +1,4 @@
 # main links
 main:
-  - title: "Leistungen"
-    url: /services
-  - title: "Über mich"
-    url: /about
-  - title: "Referenzen"
-    url: /references
-  - title: "Blog"
-    url: "https://blog.perstarke-webdev.de/"
-
-main_en:
-  - title: "Services"
-    url: /en/services
-  - title: "About me"
-    url: /en/about
-  - title: "References"
-    url: /en/references
-  - title: "Blog"
-    url: "https://blog.perstarke-webdev.de/"
-
+  - title: "Placeholder"
+    url: /
