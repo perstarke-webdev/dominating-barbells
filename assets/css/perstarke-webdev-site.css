@@ -9,7 +9,7 @@
 :root {
   --lightgrey-background: rgba(255, 255, 255, 0.15);
   --darker-lightgrey-background: rgba(255, 255, 255, 0.05);
-  --default-skin-color: #00adb5;
+  --default-skin-color: #C29D3D;
   --light-skin-color: #8efaff;
 }
 
@@ -461,16 +461,16 @@ Angebot / Marketing
 }
 
 .footer-column a {
-    color: #00adb5 !important;
+    color: #C29D3D !important;
     text-decoration: none;
 }
 
 .colorful-icon {
-    color: #00adb5 !important;
+    color: #C29D3D !important;
 }
 
 .footer-column ul li a {
-    color: #00adb5;
+    color: #C29D3D;
     text-decoration: none;
 }
 
@@ -483,7 +483,7 @@ Angebot / Marketing
 .social-icons li a {
     width: 50px;
     height: 50px;
-    background-color: #00adb5;
+    background-color: #C29D3D;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -497,7 +497,7 @@ Angebot / Marketing
 }
 
 .social-icons li a:hover {
-    background-color: #007f89;
+    background-color: black;
     text-decoration: none !important;
 }
 
@@ -525,7 +525,7 @@ Angebot / Marketing
 }
 
 .footer-bottom a {
-    color: #00adb5 !important;
+    color: #C29D3D !important;
     text-decoration: none;
 }
 

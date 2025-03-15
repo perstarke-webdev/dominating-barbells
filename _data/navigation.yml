@@ -1,4 +1,8 @@
 # main links
 main:
-  - title: "Placeholder"
-    url: /
+  - title: "Über uns"
+    url: /ueber
+  - title: "Angebote"
+    url: /angebote
+  - title: "Unsere Wettkämpfe"
+    url: /wettkaempfe
