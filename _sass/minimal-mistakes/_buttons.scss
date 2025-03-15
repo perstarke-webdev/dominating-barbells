@@ -1,0 +1,171 @@
+/* ==========================================================================
+   BUTTONS
+   ========================================================================== */
+
+/*
+   Default button
+   ========================================================================== */
+
+.btn {
+  /* default */
+  display: inline-block;
+  margin-bottom: 0.25em;
+  padding: 0.5em 1em;
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-width: 0;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+  .icon {
+    margin-right: 0.5em;
+  }
+
+  .icon + .hidden {
+    margin-left: -0.5em; /* override for hidden text*/
+  }
+
+  /* button colors */
+  $buttoncolors:
+  (primary, $primary-color),
+  (inverse, #fff),
+  (light-outline, transparent),
+  (primary-outline, mix($primary-color, transparent, 20%)),
+  (kraftkollektiv-outline, mix(#82a380, transparent, 20%)),
+  (wildstrengthcoaching-outline, mix(#acd239, transparent, 20%)),
+  (peterhruschka-outline, mix(#1453a9, transparent, 20%)),
+  (littlegreenkitchen-outline, mix(#648e53, transparent, 20%)),
+  (neurotidal-outline, mix(#baa2fa, transparent, 20%)),
+  (trainingslager-outline, mix(#dbb167, transparent, 20%)),
+  (onward-outline, mix(#39d6a2, transparent, 20%)),
+  (inbewegung-outline, mix(#616756, transparent, 20%)),
+  (success, $success-color),
+  (warning, $warning-color),
+  (danger, $danger-color),
+  (info, $info-color),
+  (facebook, $facebook-color),
+  (twitter, $twitter-color),
+  (linkedin, $linkedin-color);
+
+  @each $buttoncolor, $color in $buttoncolors {
+    &--#{$buttoncolor} {
+      @include yiq-contrasted($color);
+      @if ($buttoncolor == inverse) {
+        border: 1px solid $border-color;
+      }
+      @if ($buttoncolor == light-outline) {
+        border: 1px solid #fff;
+      }
+      @if ($buttoncolor == primary-outline) {
+        border: 2.5px solid $primary-color;
+      }
+      @if ($buttoncolor == kraftkollektiv-outline) {
+        border: 2.5px solid #82a380;
+      }
+      @if ($buttoncolor == wildstrengthcoaching-outline) {
+        border: 2.5px solid #acd239;
+        color: white !important;
+      }
+      @if ($buttoncolor == peterhruschka-outline) {
+        border: 2.5px solid #1453a9;
+      }
+      @if ($buttoncolor == littlegreenkitchen-outline) {
+        border: 2.5px solid #ecd1c3;
+        color: white !important;
+      }
+      @if ($buttoncolor == neurotidal-outline) {
+        border: 2.5px solid #baa2fa;
+        color: white !important;
+      }
+      @if ($buttoncolor == trainingslager-outline) {
+        border: 2.5px solid #dbb167;
+        color: white !important;
+      }
+      @if ($buttoncolor == onward-outline) {
+        border: 2.5px solid #39d6a2;
+        color: white !important;
+      }
+      @if ($buttoncolor == inbewegung-outline) {
+        border: 2.5px solid #616756;
+        color: white !important;
+      }
+
+      &:visited {
+        @include yiq-contrasted($color);
+      }
+
+      &:hover {
+        @include yiq-contrasted(mix(#000, $color, 20%));
+        @if ($buttoncolor == kraftkollektiv-outline) {
+          color: white !important;
+        }
+        @if ($buttoncolor == wildstrengthcoaching-outline) {
+          color: white !important;
+        }
+      }
+    }
+  }
+
+  /* fills width of parent container */
+  &--block {
+    display: block;
+    width: 100%;
+
+    + .btn--block {
+      margin-top: 0.25em;
+    }
+  }
+
+  /* disabled */
+  &--disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    box-shadow: none;
+    opacity: 0.65;
+  }
+
+  /* extra large button */
+  &--x-large {
+    font-size: $type-size-4;
+  }
+
+  /* large button */
+  &--large {
+    font-size: $type-size-5;
+  }
+
+  /* small button */
+  &--small {
+    font-size: $type-size-7;
+  }
+}
+
+.masthead__menu-item {
+  position: relative !important;
+  top: 5px !important;
+}
+
+.btn-nav {
+  position: relative !important;
+  top: -4px !important;
+  margin-right: 4rem !important;
+}
+
+.btn-nav-german {
+  margin-right: 2rem !important;
+}
+
+.btn-nav:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+@media (max-width: 600px) {
+  .btn-nav, .btn-nav-german {
+    margin-right: 1rem !important;
+  }
+}

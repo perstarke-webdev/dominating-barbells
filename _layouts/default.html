@@ -1,0 +1,94 @@
+---
+---
+
+<!doctype html>
+
+
+<!--
+  Minimal Mistakes Jekyll Theme 4.22.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="{{ site.locale | slice: 0,2 | default: 'en' }}" class="no-js">
+<head>
+  {% include head.html %}
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+            .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+            n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1242610');
+  </script>
+  <!-- End MailerLite Universal -->
+  <script defer data-domain="perstarke-webdev.de" src="https://plausible.io/js/script.js"></script>
+  {% include head/custom.html %}
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+{% include_cached skip-links.html %}
+{% include_cached masthead.html %}
+
+<div class="initial-content">
+  {{ content }}
+  <div id="cookie-banner" class="center">
+    Diese Website wird über GitHub Pages zur Verfügung gestellt, das heißt, sie verwendet ein globales Verteilernetzwerk (CDN), um Inhalte zuverlässig anzuzeigen. Wenn du die Website nutzt, können einige deiner nicht-persönlichen Daten, wie beispielsweise die IP-Adresse und Informationen zur Seitennutzung, über dieses Netzwerk übertragen werden, um eine einwandfreie Funktion der Website zu gewährleisten.
+    Mehr Infos findest du im
+    <a href="/imprint#github-pages-und-cdn-nutzung"
+       target="_blank" rel="noopener noreferrer nofollow">
+      Impressum & Datenschutz</a><br><br>
+
+    Bitte bestätige, dass du damit einverstanden bist, sowie damit, dass wir ein Zustimmungs-Cookie verwenden, das für einen Zeitraum von einem Tag gespeichert wird. Dieses Cookie ermöglicht es uns, deine Zustimmung zur Verwendung von nicht-persönlichen Daten und zur einwandfreien Funktion der Website zu speichern.<br><br>
+    <button class="btn btn--primary" id="cookie-consent-btn">Einverstanden</button>
+  </div>
+
+
+  <!-- JavaScript-Code für den Cookie Consent-Banner -->
+  <script>
+    // Überprüfe, ob das Cookie für die Zustimmung gesetzt ist
+    if (document.cookie.indexOf('cookieConsent=1') !== -1) {
+        document.getElementById('cookie-banner').style.display = 'none';
+    }
+
+  // Funktion zum Ausblenden des Banners und Setzen des Zustimmungs-Cookies für einen Tag
+  function setCookieConsent() {
+      document.getElementById('cookie-banner').style.display = 'none';
+
+      // Erstelle ein Date-Objekt für das Ablaufdatum (einen Tag ab dem aktuellen Datum)
+      var expiresDate = new Date();
+      expiresDate.setDate(expiresDate.getDate() + 1);
+
+      // Setze ein Cookie, um die Zustimmung des Benutzers für einen Tag zu speichern
+      document.cookie = 'cookieConsent=1; expires=' + expiresDate.toUTCString() + '; path=/';
+  }
+
+    // Event Listener für den Einverstanden-Button
+    document.getElementById('cookie-consent-btn').addEventListener('click', setCookieConsent);
+</script>
+</div>
+
+{% if site.search == true %}
+<div class="search-content">
+  {% include_cached search/search_form.html %}
+</div>
+{% endif %}
+
+<div id="footer" class="page__footer">
+  <footer>
+    {% include footer/custom.html %}
+    {% include_cached footer.html %}
+  </footer>
+</div>
+
+{% include scripts.html %}
+
+</body>
+</html>
