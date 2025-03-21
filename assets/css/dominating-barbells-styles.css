@@ -750,9 +750,6 @@ Angebot / Marketing
 
 
 
-.small-top-margin {
-    margin-top: 1rem;
-}
 
 .new-testimonial {
 }
@@ -787,6 +784,21 @@ Angebot / Marketing
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .overlapping-hero-img {
     position: relative;
     width: 400px;
@@ -812,4 +824,9 @@ Angebot / Marketing
     .content {
         bottom: 80px;
     }
+}
+
+
+.small-top-margin {
+    margin-top: 3rem;
 }
