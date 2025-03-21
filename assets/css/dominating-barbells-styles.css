@@ -783,3 +783,33 @@ Angebot / Marketing
 .gold {
     color: goldenrod;
 }
+
+
+
+
+.overlapping-hero-img {
+    position: relative;
+    width: 400px;
+    bottom: 180px;
+    left: 70%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.content {
+    position: relative;
+    bottom: 250px;
+}
+
+@media (max-width: 900px) {
+    .overlapping-hero-img {
+        width: 300px;
+        bottom: 120px;
+        left: 50%;
+    }
+
+    .content {
+        bottom: 80px;
+    }
+}
