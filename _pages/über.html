@@ -8,11 +8,28 @@ header:
 
 
 excerpt: "Lorem Ipsum"
+
+image-text-row:
+  - header: "Hi, ich bin Aaron"
+    excerpt: "Mehr Infos über mich"
+    image-url: "/images/about.webp"
+    alt-text: "Alternative text for the image"
+    image-width: "300px"
+    image-right: false
+
 ---
 
 <section class="content">
 
   <h1>Erste Überschrift</h1>
+
+  <div class="small-top-margin">
+    {% include image-text-row %}
+  </div>
+
+  <hr>
+
+  <h1> Athlet:innen-Vorstellung</h1>
 
 </section>
 
