@@ -34,14 +34,7 @@
   (inverse, #fff),
   (light-outline, transparent),
   (primary-outline, mix($primary-color, transparent, 20%)),
-  (kraftkollektiv-outline, mix(#82a380, transparent, 20%)),
-  (wildstrengthcoaching-outline, mix(#acd239, transparent, 20%)),
-  (peterhruschka-outline, mix(#1453a9, transparent, 20%)),
-  (littlegreenkitchen-outline, mix(#648e53, transparent, 20%)),
-  (neurotidal-outline, mix(#baa2fa, transparent, 20%)),
-  (trainingslager-outline, mix(#dbb167, transparent, 20%)),
-  (onward-outline, mix(#39d6a2, transparent, 20%)),
-  (inbewegung-outline, mix(#616756, transparent, 20%)),
+  (dark, $background-color),
   (success, $success-color),
   (warning, $warning-color),
   (danger, $danger-color),
@@ -163,6 +156,10 @@
 .btn-nav:hover {
   background-color: #faf0e6 !important;
   color: $masthead-link-color !important;
+}
+
+.btn--dark:hover {
+  background-color: black !important;
 }
 
 @media (max-width: 600px) {
