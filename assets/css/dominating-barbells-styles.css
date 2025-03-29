@@ -834,3 +834,8 @@ Angebot / Marketing
     }
 
 }
+
+
+.page__hero--overlay {
+    background-attachment: fixed !important;
+}
