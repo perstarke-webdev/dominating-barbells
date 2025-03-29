@@ -793,7 +793,20 @@ Angebot / Marketing
 .content {
     position: relative;
     bottom: 250px;
+    margin-bottom: -200px;
 }
+
+
+.small-top-margin {
+    margin-top: 3rem;
+}
+
+.home-heading-one {
+    padding-left: 3rem;
+    max-width: 40vw;
+    margin-top: -0.5rem;
+}
+
 
 @media (max-width: 900px) {
     .overlapping-hero-img {
@@ -805,13 +818,12 @@ Angebot / Marketing
     .content {
         bottom: 80px;
     }
-}
 
+    .home-heading-one {
+        padding-left: 0;
+        text-align: center;
+        max-width: 100vw;
+        margin-top: 0.5rem;
+    }
 
-.small-top-margin {
-    margin-top: 3rem;
-}
-
-.home-heading-one {
-    padding-left: 3rem;
 }
