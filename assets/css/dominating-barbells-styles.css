@@ -6,6 +6,14 @@
 }
 
 
+
+div.box {
+    margin: 20px;
+    padding: 20px;
+}
+
+
+
 /**
 cookie banner
 */
@@ -36,7 +44,6 @@ code {
     padding: 0 6px !important;
     font-style: italic;
 }
-
 
 
 
@@ -202,6 +209,20 @@ code {
         margin-bottom: -8rem;
     }
 }
+
+
+
+.small-bottom-margin {
+    margin-bottom: 20px !important;
+}
+
+
+
+
+
+
+
+
 
 
 
