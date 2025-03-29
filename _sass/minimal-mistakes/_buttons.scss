@@ -50,7 +50,7 @@
         border: 1px solid $border-color;
       }
       @if ($buttoncolor == light-outline) {
-        border: 1px solid #fff;
+        border: 1px solid $primary-color;
       }
       @if ($buttoncolor == primary-outline) {
         border: 2.5px solid $primary-color;

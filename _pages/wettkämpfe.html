@@ -6,30 +6,52 @@ header:
   overlay_image: /images/header.webp
   overlay_filter: rgba(0, 0, 0, 0.6)
 
+  actions:
+    - label: "Zukünftige Wettkämpfe"
+      url: /wettkaempfe#future-competitions
+      blank: false
 
-excerpt: "**Lorem Ipsum**"
+
+gallery:
+  - url: /images/1.webp
+    image_path: /images/1.webp
+    alt: "placeholder image 1"
+    title: "Image 1 title caption"
+  - url: /images/2.webp
+    image_path: /images/2.webp
+    alt: "placeholder image 2"
+    title: "Image 2 title caption"
+  - url: /images/3.webp
+    image_path: /images/3.webp
+    alt: "placeholder image 3"
+    title: "Image 3 title caption"
+
+
+excerpt: "**Sehe dir jetzt unsere vergangenen und bevorstehen Wettkämpfe an**"
 ---
 
 <section class="content">
 
   <h1 class="home-heading-one">Vergangene Wettkämpfe</h1>
   <div class="box-container small-top-margin">
-    <div class="box box--primary box-third">
+    <div class="box box--primary">
       <h3><i class="fas fa-dumbbell"></i> Dominating Barbells 2024</h3>
       <p>50 Athleten, 300 Zuschauer – ein Event voller beeindruckender Kraftleistungen.</p>
       <a href="/wettkaempfe#dominating-barbells-2024" class="btn btn--primary">Mehr erfahren</a>
+      {% include gallery caption="Placeholder Images" %}
     </div>
 
-    <div class="box box--primary box-third">
+    <div class="box box--primary">
       <h3><i class="fas fa-hand-rock"></i> Barbell Battle – Bench Only</h3>
       <p>März 2025 mit PEAKS Isny & K2 Powerbase: 30 Athleten, 150 Zuschauer, starke Bench-Performances.</p>
       <a href="/wettkaempfe#barbell-battle-2025" class="btn btn--primary">Mehr erfahren</a>
+      {% include gallery caption="Placeholder Images" %}
     </div>
   </div>
 
   <div class="sep-section with-bottom-margin small-top-margin">
     <br><br>
-    <h1>Zukünftige Wettkämpfe</h1>
+    <h1 id="future-competitions">Zukünftige Wettkämpfe</h1>
       <div class="box">
         <h3><i class="fas fa-bolt"></i> Fitness Store Classic – Isny Edition</h3>
         <p>30.–31. August: 130 Athleten, größtes Powerlifting-Event im Allgäu mit professionellen Bedingungen, Musik, Foto-/Videopaketen und Vendorenbereich.</p>
