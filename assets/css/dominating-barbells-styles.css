@@ -808,6 +808,12 @@ Angebot / Marketing
 }
 
 
+@media (max-width: 1250px) {
+    .overlapping-hero-img {
+        bottom: 150px;
+    }
+}
+
 @media (max-width: 900px) {
     .overlapping-hero-img {
         width: 300px;
@@ -817,6 +823,7 @@ Angebot / Marketing
 
     .content {
         bottom: 80px;
+        margin-bottom: -20px;
     }
 
     .home-heading-one {
