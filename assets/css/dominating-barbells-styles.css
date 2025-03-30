@@ -287,6 +287,12 @@ code {
 }
 
 
+@media screen and (max-width: 768px) {
+    .page__hero--overlay {
+        background-attachment: scroll !important;
+    }
+}
+
 
 
 
