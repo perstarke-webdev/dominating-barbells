@@ -72,7 +72,72 @@ excerpt: "**Deine Ziele, unser Fokus**"
 
   <h1> Athlet:innen-Vorstellung</h1>
 
+
+  <div class="athletes-grid">
+    <!-- Athlete 1 -->
+    <div class="athlete-card">
+      <div class="athlete-image" tabindex="0">
+        <img src="/images/fabian.webp" alt="Fabian Schwarz">
+        <div class="info-hint">
+          <i class="fas fa-info-circle"></i> Klicke für mehr Infos
+        </div>
+        <div class="athlete-overlay">
+          <ul>
+            <li>Europäischer Meister</li>
+            <li>Deutscher Meister</li>
+            <li>3. Platz Fitness Store Classic</li>
+          </ul>
+        </div>
+      </div>
+      <h4>Fabian Schwarz</h4>
+    </div>
+
+    <!-- Athlete 2 -->
+    <div class="athlete-card">
+      <div class="athlete-image" tabindex="0">
+        <img src="/images/laura.webp" alt="Laura Brandner">
+        <div class="info-hint">
+          <i class="fas fa-info-circle"></i> Klicke für mehr Infos
+        </div>
+        <div class="athlete-overlay">
+          <ul>
+            <li>2. Platz Barbell Battle 2025</li>
+          </ul>
+        </div>
+      </div>
+      <h4>Laura Brandner</h4>
+    </div>
+
+    <!-- Athlete 3 -->
+    <div class="athlete-card">
+      <div class="athlete-image" tabindex="0">
+        <img src="/images/ben.webp" alt="Ben Schuler">
+        <div class="info-hint">
+          <i class="fas fa-info-circle"></i> Klicke für mehr Infos
+        </div>
+        <div class="athlete-overlay">
+          <ul>
+            <li>300+ DOTS</li>
+          </ul>
+        </div>
+      </div>
+      <h4>Ben Schuler</h4>
+    </div>
+  </div>
+
+
+
+
 </section>
+
+
+<script>
+  document.querySelectorAll('.athlete-image').forEach(el => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('clicked');
+    });
+  });
+</script>
 
 
 
