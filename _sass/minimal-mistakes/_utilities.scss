@@ -670,3 +670,19 @@ a.reversefootnote {
     order: -1;
   }
 }
+
+
+.round-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto 0px;
+}
+
+.round-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
