@@ -379,3 +379,35 @@ code {
 
 
 
+
+.box-with-bg {
+    position: relative;
+    background-image: url('/images/background-1.webp');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    overflow: hidden;
+}
+
+.box-with-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 0;
+}
+
+.box-with-bg > * {
+    position: relative;
+    z-index: 1;
+}
+
+.bg-two {
+    background-image: url('/images/background-2.webp');
+}
+
+.bg-three {
+    background-image: url('/images/background-3.webp');
+}
+
+
