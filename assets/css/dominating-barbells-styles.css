@@ -477,6 +477,7 @@ code {
     justify-content: center;
     align-items: center;
     z-index: 2;
+    text-align: left;
 }
 
 .athlete-image.clicked .athlete-overlay {
