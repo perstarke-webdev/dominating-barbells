@@ -1,19 +1,19 @@
 ---
 layout: single
-title: <br><br><br><br><br><br><br>Impressum und Datenschutz
+title: <br><br><br><br><br>Impressum und Datenschutz
 permalink: /imprint
 author_profile: false
 ---
 
 #### Anbieter und Verantwortliche Person
-Per Starke, Willi-Lauf Allee 43, D-50858 Köln
+Nathalie Biebel  
+Mechenseerstaße 16  
+88316 Isny  
+USt: 91112/24782  
 
 
 #### Kontakt
-Telefon: +49 160 93268817
-<br>
-e-Mail: info_at_perstarke-webdev.de
-<br>
+e-Mail: dominating.barbells_at_gmail.com
 
 
 ## Datenschutzerklärung
