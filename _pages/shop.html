@@ -1,5 +1,5 @@
 ---
-title: Angebote
+title: Shop
 layout: splash
 permalink: /shop
 header:
@@ -15,19 +15,31 @@ excerpt: "**Merch und Wettkampf-Anmeldung**"
   <h1 class="home-heading-one">Lorem Ipsum Überschrift 1</h1>
 
 
-  <section id="wettkaempfe" class="small-top-margin">
-    <h1>Wettkampf-Anmeldungen</h1>
-      {% include shop/testprodukt.html %}
+  <section id="wettkaempfe" class="small-top-margin shop-section">
+    <h1 class="shop-heading">Wettkampf-Anmeldungen</h1>
+
+    <div class="shop-grid">
+      <div class="product-button-wrapper">
+        {% include shop/testprodukt.html %}
+      </div>
+
+      <div class="product-button-wrapper">
+        {% include shop/testprodukt2.html %}
+      </div>
+
+    </div>
   </section>
 
-  <br><br>
   <hr>
-  <br><br>
 
-  <section id="merch">
-    <h1>Merchandise</h1>
+  <section id="merch" class="shop-section">
+    <h1 class="shop-heading">Merchandise</h1>
 
+    <div class="shop-grid">
+
+    </div>
   </section>
+
 
 
 </section>

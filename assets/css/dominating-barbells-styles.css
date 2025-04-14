@@ -577,3 +577,42 @@ code {
         flex: 1 1 100%;
     }
 }
+
+
+
+
+
+
+.shop-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
+.shop-heading {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.shop-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.product-button-wrapper {
+    flex: 1 1 calc(50% - 40px);
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Mobile: stack into one column */
+@media (max-width: 768px) {
+    .product-button-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
