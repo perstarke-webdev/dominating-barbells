@@ -603,7 +603,7 @@ code {
 }
 
 .product-button-wrapper {
-    flex: 1 1 calc(50% - 40px);
+    flex: 1 1 calc(33% - 40px);
     max-width: 400px;
     display: flex;
     justify-content: center;

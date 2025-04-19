@@ -1,4 +1,4 @@
-<div id='product-component-1744618835714'></div>
+<div id='product-component-1745075706600'></div>
 <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
@@ -12,7 +12,6 @@
         } else {
             loadScript();
         }
-
         function loadScript() {
             var script = document.createElement('script');
             script.async = true;
@@ -20,7 +19,6 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
             script.onload = ShopifyBuyInit;
         }
-
         function ShopifyBuyInit() {
             var client = ShopifyBuy.buildClient({
                 domain: 'm1ened-1h.myshopify.com',
@@ -28,8 +26,8 @@
             });
             ShopifyBuy.UI.onReady(client).then(function (ui) {
                 ui.createComponent('product', {
-                    id: '15025403429189',
-                    node: document.getElementById('product-component-1744618835714'),
+                    id: '15035585331525',
+                    node: document.getElementById('product-component-1745075706600'),
                     moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
                     options: {
                         "product": {
@@ -40,6 +38,9 @@
                                         "margin-left": "20px",
                                         "margin-bottom": "50px"
                                     }
+                                },
+                                "title": {
+                                    "color": "#ffffff"
                                 },
                                 "button": {
                                     ":hover": {
@@ -52,15 +53,19 @@
                                     "border-radius": "5px",
                                     "padding-left": "60px",
                                     "padding-right": "60px"
+                                },
+                                "price": {
+                                    "color": "#ffffff"
+                                },
+                                "compareAt": {
+                                    "color": "#ffffff"
+                                },
+                                "unitPrice": {
+                                    "color": "#ffffff"
                                 }
                             },
-                            "contents": {
-                                "img": false,
-                                "title": false,
-                                "price": false
-                            },
                             "text": {
-                                "button": "Zum Warenkorb hinzufügen"
+                                "button": "Jetzt anmelden"
                             }
                         },
                         "productSet": {
@@ -98,6 +103,30 @@
                                     "border-radius": "5px",
                                     "padding-left": "60px",
                                     "padding-right": "60px"
+                                },
+                                "title": {
+                                    "font-family": "Helvetica Neue, sans-serif",
+                                    "font-weight": "bold",
+                                    "font-size": "26px",
+                                    "color": "#4c4c4c"
+                                },
+                                "price": {
+                                    "font-family": "Helvetica Neue, sans-serif",
+                                    "font-weight": "normal",
+                                    "font-size": "18px",
+                                    "color": "#4c4c4c"
+                                },
+                                "compareAt": {
+                                    "font-family": "Helvetica Neue, sans-serif",
+                                    "font-weight": "normal",
+                                    "font-size": "15.299999999999999px",
+                                    "color": "#4c4c4c"
+                                },
+                                "unitPrice": {
+                                    "font-family": "Helvetica Neue, sans-serif",
+                                    "font-weight": "normal",
+                                    "font-size": "15.299999999999999px",
+                                    "color": "#4c4c4c"
                                 }
                             },
                             "text": {
@@ -119,8 +148,11 @@
                                 }
                             },
                             "text": {
-                                "total": "Subtotal",
-                                "button": "Checkout"
+                                "title": "Warenkorb",
+                                "total": "Zwischensumme",
+                                "empty": "Dein Warenkorb ist leer",
+                                "notice": "Rabattcodes werden beim Check-out hinzugefügt",
+                                "button": "Jetzt bezahlen"
                             }
                         },
                         "toggle": {
