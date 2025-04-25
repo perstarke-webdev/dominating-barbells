@@ -616,3 +616,11 @@ code {
         max-width: 100%;
     }
 }
+
+
+
+.bigger {
+    font-size: 120% !important;
+}
+
+
