@@ -623,4 +623,19 @@ code {
     font-size: 120% !important;
 }
 
+.button-and-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-note {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #aaa;
+    width: 100%;
+}
+
 
