@@ -484,7 +484,6 @@ code {
     display: flex;
 }
 
-/* Info hint */
 .info-hint {
     position: absolute;
     bottom: 10px;
@@ -500,14 +499,12 @@ code {
     z-index: 1;
 }
 
-/* Athlete name */
 .athlete-card h4 {
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .athlete-card {
         flex: 1 1 calc(50% - 22.5px);
@@ -545,7 +542,7 @@ code {
 }
 
 .testimonial {
-    background-color: rgba(194, 157, 61, 0.1); /* same subtle gold as other boxes */
+    background-color: rgba(194, 157, 61, 0.1);
     border: 1px solid #C29D3D;
     border-radius: 8px;
     padding: 1.5rem;
@@ -571,7 +568,6 @@ code {
     text-align: center;
 }
 
-/* Stack on mobile */
 @media (max-width: 768px) {
     .testimonial {
         flex: 1 1 100%;
@@ -609,7 +605,6 @@ code {
     justify-content: center;
 }
 
-/* Mobile: stack into one column */
 @media (max-width: 768px) {
     .product-button-wrapper {
         flex: 1 1 100%;
@@ -639,3 +634,43 @@ code {
 }
 
 
+
+
+
+
+/* Form */
+
+.competition-form {
+    background-color: #1F1F1F;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #eaeaea;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: #1B1B1B;
+    border: 1px solid #C29D3D;
+    border-radius: 8px;
+    padding: 0.75rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #cccccc;
+}
