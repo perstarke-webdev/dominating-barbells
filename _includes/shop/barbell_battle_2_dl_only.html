@@ -1,4 +1,4 @@
-<div id='product-component-1745075686250'></div>
+<div id='product-component-1745885651257'></div>
 <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
@@ -12,7 +12,6 @@
         } else {
             loadScript();
         }
-
         function loadScript() {
             var script = document.createElement('script');
             script.async = true;
@@ -20,7 +19,6 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
             script.onload = ShopifyBuyInit;
         }
-
         function ShopifyBuyInit() {
             var client = ShopifyBuy.buildClient({
                 domain: 'm1ened-1h.myshopify.com',
@@ -29,7 +27,7 @@
             ShopifyBuy.UI.onReady(client).then(function (ui) {
                 ui.createComponent('product', {
                     id: '15035576385861',
-                    node: document.getElementById('product-component-1745075686250'),
+                    node: document.getElementById('product-component-1745885651257'),
                     moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
                     options: {
                         "product": {
@@ -66,8 +64,9 @@
                                     "color": "#ffffff"
                                 }
                             },
+                            "buttonDestination": "checkout",
                             "text": {
-                                "button": "Jetzt anmelden"
+                                "button": "Jetzt zahlen"
                             }
                         },
                         "productSet": {
@@ -155,7 +154,8 @@
                                 "empty": "Dein Warenkorb ist leer",
                                 "notice": "Rabattcodes werden beim Check-out hinzugefügt",
                                 "button": "Jetzt bezahlen"
-                            }
+                            },
+                            "popup": false
                         },
                         "toggle": {
                             "styles": {
