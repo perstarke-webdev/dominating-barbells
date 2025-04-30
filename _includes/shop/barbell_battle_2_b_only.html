@@ -1,4 +1,4 @@
-<div id='product-component-1745885034953'></div>
+<div id='product-component-1745977266906'></div>
 <script type="text/javascript">
     /*<![CDATA[*/
     (function () {
@@ -12,7 +12,6 @@
         } else {
             loadScript();
         }
-
         function loadScript() {
             var script = document.createElement('script');
             script.async = true;
@@ -20,7 +19,6 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
             script.onload = ShopifyBuyInit;
         }
-
         function ShopifyBuyInit() {
             var client = ShopifyBuy.buildClient({
                 domain: 'm1ened-1h.myshopify.com',
@@ -29,7 +27,7 @@
             ShopifyBuy.UI.onReady(client).then(function (ui) {
                 ui.createComponent('product', {
                     id: '15035585331525',
-                    node: document.getElementById('product-component-1745885034953'),
+                    node: document.getElementById('product-component-1745977266906'),
                     moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
                     options: {
                         "product": {
@@ -66,9 +64,8 @@
                                     "color": "#ffffff"
                                 }
                             },
-                            "buttonDestination": "checkout",
                             "text": {
-                                "button": "Jetzt zahlen"
+                                "button": "Zum Warenkorb hinzufügen"
                             }
                         },
                         "productSet": {
