@@ -1,15 +1,23 @@
-/* special styles for Per Starke Web-Dev website */
-
-
 .center {
     text-align: center !important;
 }
 
 
+.bold {
+    font-weight: bold !important;
+}
+
+.margin-right {
+    margin-right: 6px;
+}
 
 div.box {
     margin: 20px;
     padding: 20px;
+}
+
+.gold {
+    color: #C29D3D;
 }
 
 
