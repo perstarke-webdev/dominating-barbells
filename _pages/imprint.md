@@ -76,5 +76,15 @@ Auf dieser Webseite wird FontAwesome allerdings lokal gehostet und somit keine D
 <br/>
 
 
+### Anmeldungen & Checkout
+
+Für die Anmeldung zu Wettkämpfen nutzen wir ein Formular des Dienstleisters **Formspree**. Die Bezahlung erfolgt über **Shopify Buy Buttons**. Dabei werden personenbezogene Daten (z. B. Name, E-Mail, Adresse) übermittelt und verarbeitet.
+
+Die Verarbeitung dient ausschließlich der Abwicklung Ihrer Anmeldung und Zahlung. Dabei gelten die Datenschutzrichtlinien von Formspree und Shopify.
+Weitere Informationen dazu finden Sie hier:
+🔗 [Formspree Datenschutzerklärung](https://formspree.io/legal/privacy-policy)
+🔗 [Shopify Datenschutzerklärung](https://www.shopify.de/legal/datenschutz)
+
+
 #### Widerruf, Änderungen, Berichtigungen und Aktualisierungen
 Der Nutzer hat das Recht, auf Antrag unentgeltlich Auskunft zu erhalten über die personenbezogenen Daten, die über ihn gespeichert wurden. Zusätzlich hat der Nutzer das Recht auf Berichtigung unrichtiger Daten, Sperrung und Löschung seiner personenbezogenen Daten, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht.<br />
