@@ -1,15 +1,23 @@
-/* special styles for Per Starke Web-Dev website */
-
-
 .center {
     text-align: center !important;
 }
 
 
+.bold {
+    font-weight: bold !important;
+}
+
+.margin-right {
+    margin-right: 6px;
+}
 
 div.box {
     margin: 20px;
     padding: 20px;
+}
+
+.gold {
+    color: #C29D3D;
 }
 
 
@@ -484,7 +492,6 @@ code {
     display: flex;
 }
 
-/* Info hint */
 .info-hint {
     position: absolute;
     bottom: 10px;
@@ -500,14 +507,12 @@ code {
     z-index: 1;
 }
 
-/* Athlete name */
 .athlete-card h4 {
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .athlete-card {
         flex: 1 1 calc(50% - 22.5px);
@@ -545,7 +550,7 @@ code {
 }
 
 .testimonial {
-    background-color: rgba(194, 157, 61, 0.1); /* same subtle gold as other boxes */
+    background-color: rgba(194, 157, 61, 0.1);
     border: 1px solid #C29D3D;
     border-radius: 8px;
     padding: 1.5rem;
@@ -571,9 +576,146 @@ code {
     text-align: center;
 }
 
-/* Stack on mobile */
 @media (max-width: 768px) {
     .testimonial {
         flex: 1 1 100%;
     }
+}
+
+
+
+
+
+
+.shop-section {
+    margin-top: 4rem;
+    text-align: center;
+}
+
+
+.shop-heading {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.shop-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 1rem;
+}
+
+.product-button-wrapper {
+    flex: 1 1 calc(33% - 40px);
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .product-button-wrapper {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+.bigger {
+    font-size: 120% !important;
+}
+
+.button-and-note {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.product-note {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    text-align: center;
+    color: #aaa;
+    width: 100%;
+}
+
+
+
+.product-custom {
+    background-color: #1F1F1F;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    color: #fff;
+}
+
+.product-image {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.product-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #d4b76a;
+    margin-bottom: 16px;
+}
+
+
+
+
+
+
+/* Form */
+
+.competition-form {
+    background-color: #1F1F1F;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    color: #eaeaea;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    background-color: #1B1B1B;
+    border: 1px solid #C29D3D;
+    border-radius: 8px;
+    padding: 0.75rem;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #cccccc;
+}
+
+
+
+
+
+
+.padded {
+    margin: 0 2rem;
 }
