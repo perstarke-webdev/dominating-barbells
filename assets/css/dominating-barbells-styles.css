@@ -427,18 +427,14 @@ code {
 
 
 
-
-
 .athletes-grid {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    flex-wrap: wrap;
-    justify-content: space-between;
     margin-top: 3rem;
 }
 
 .athlete-card {
-    flex: 1 1 calc(25% - 22.5px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -513,11 +509,20 @@ code {
     font-weight: bold;
 }
 
+/* Responsive: 2 columns on tablets and smaller */
 @media (max-width: 768px) {
-    .athlete-card {
-        flex: 1 1 calc(50% - 22.5px);
+    .athletes-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+/* Optional: 1 column on very small screens */
+@media (max-width: 480px) {
+    .athletes-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 .overlapping-hero-img-home {
