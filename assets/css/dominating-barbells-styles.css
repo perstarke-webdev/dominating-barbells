@@ -724,3 +724,71 @@ code {
 .padded {
     margin: 0 2rem;
 }
+
+/* Partner Page Styles */
+.partner-section {
+  padding: 2rem 0;
+}
+.partner-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1200px; /* Or another max-width as you prefer */
+  padding: 0 1rem;
+}
+.partner-image {
+  flex: 1;
+  max-width: 400px; /* Adjust as needed */
+}
+.partner-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.partner-content {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.partner-logo {
+  max-width: 150px; /* Adjust as needed */
+  margin-bottom: 1.5rem;
+}
+.partner-logo img {
+  width: 100%;
+}
+.partner-content h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+.partner-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .partner-container {
+    flex-direction: column;
+  }
+  .partner-content {
+    order: 1;
+    align-items: center;
+    text-align: center;
+  }
+   .partner-image {
+    order: 2;
+    margin-top: 2rem;
+  }
+  .partner-content h2 {
+    order: 1;
+  }
+  .partner-logo {
+    order: 2;
+  }
+  .partner-content p {
+    order: 3;
+  }
+}
