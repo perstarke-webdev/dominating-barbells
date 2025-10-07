@@ -769,8 +769,20 @@ code {
   line-height: 1.6;
 }
 
+
+.partner-container.partner-container-reversed {
+  flex-direction: row-reverse;
+}
+
+.second-partner {
+  margin-top: 4rem;
+}
+
 @media (max-width: 768px) {
   .partner-container {
+    flex-direction: column;
+  }
+  .partner-container.partner-container-reversed {
     flex-direction: column;
   }
   .partner-content {
