@@ -6,5 +6,7 @@ main:
     url: /angebote
   - title: "Unsere Wettkämpfe"
     url: /wettkaempfe
+  - title: "Unsere Partner"
+    url: /partner
   - title: "Shop"
     url: /shop
