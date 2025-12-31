@@ -6,10 +6,9 @@ author_profile: false
 ---
 
 #### Anbieter und Verantwortliche Person
-Nathalie Biebel  
-Mechenseerstaße 16  
-88316 Isny  
-USt: 91112/24782  
+Aaron Biebel
+Unterer Grabenweg 36
+88316 Isny 
 
 
 #### Kontakt
