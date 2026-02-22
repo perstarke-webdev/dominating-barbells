@@ -769,9 +769,18 @@ code {
 }
 
 .competition-links .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     margin-bottom: 0;
-    min-width: 170px;
+    width: 190px;
+    min-height: 42px;
     text-align: center;
+}
+
+.competition-links .btn--dark {
+    border: 1px solid #C29D3D;
 }
 
 .competition-gallery-quad {
@@ -798,6 +807,24 @@ code {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    margin: 0;
+}
+
+.future-competition-gallery {
+    display: block;
+    width: min(100%, 260px);
+    margin: 0 auto 0.8rem;
+}
+
+.future-competition-gallery > a {
+    display: block;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.future-competition-gallery > a img {
+    width: 100%;
+    height: auto;
     margin: 0;
 }
 

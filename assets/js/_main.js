@@ -81,13 +81,19 @@ $(function() {
     });
   }
 
-  // add lightbox class to all image links
-  $(
-    "a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif'],a[href$='.webp']"
-  ).has("> img").addClass("image-popup");
+  // add lightbox classes to all image links and keep dedicated gallery groups separate
+  var lightboxSelector =
+    "a[href$='.jpg'],a[href$='.jpeg'],a[href$='.JPG'],a[href$='.png'],a[href$='.gif'],a[href$='.webp']";
+  var $lightboxLinks = $(lightboxSelector).has("> img");
+  var $isolatedLightboxLinks = $lightboxLinks.filter(function() {
+    return $(this).closest(".future-competition-gallery").length > 0;
+  });
+  var $defaultLightboxLinks = $lightboxLinks.not($isolatedLightboxLinks);
 
-  // Magnific-Popup options
-  $(".image-popup").magnificPopup({
+  $defaultLightboxLinks.addClass("image-popup");
+  $isolatedLightboxLinks.addClass("image-popup-single");
+
+  var commonPopupOptions = {
     // disableOn: function() {
     //   if( $(window).width() < 500 ) {
     //     return false;
@@ -96,11 +102,6 @@ $(function() {
     // },
     type: "image",
     tLoading: "Loading image #%curr%...",
-    gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
-    },
     image: {
       tError: '<a href="%url%">Image #%curr%</a> could not be loaded.'
     },
@@ -119,7 +120,27 @@ $(function() {
     },
     closeOnContentClick: true,
     midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
-  });
+  };
+
+  // Magnific-Popup options for regular multi-image galleries
+  $(".image-popup").magnificPopup(
+    $.extend(true, {}, commonPopupOptions, {
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+      }
+    })
+  );
+
+  // Dedicated popup for standalone gallery images (no back/forward navigation)
+  $(".image-popup-single").magnificPopup(
+    $.extend(true, {}, commonPopupOptions, {
+      gallery: {
+        enabled: false
+      }
+    })
+  );
 
   // Add anchors for headings
   $('.page__content').find('h1, h2, h3, h4, h5, h6').each(function() {
@@ -134,5 +155,4 @@ $(function() {
     }
   });
 });
-
 
