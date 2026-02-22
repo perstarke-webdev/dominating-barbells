@@ -1,0 +1,54 @@
+{% assign info = site.data.shop_product_info[include.info_key] %}
+{% assign recommendation_key = site.data.shop_recommendations[include.info_key] %}
+{% assign recommendation = site.data.shop_products[recommendation_key] %}
+{% if info %}
+<details class="shop-info-toggle">
+  <summary class="shop-info-summary">{{ include.summary | default: "Mehr erfahren" }}</summary>
+  <div class="shop-info-content">
+    {% if info.teaser %}
+      <p>{{ info.teaser }}</p>
+    {% endif %}
+
+    {% if info.highlights %}
+      <ul class="shop-info-list">
+        {% for item in info.highlights %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if info.sizes %}
+      <p><strong>Größen:</strong> {{ info.sizes }}</p>
+    {% endif %}
+
+    {% if info.variant %}
+      <p><strong>Variante:</strong> {{ info.variant }}</p>
+    {% endif %}
+
+    {% if info.ingredients %}
+      <p><strong>Zutaten:</strong></p>
+      <ul class="shop-info-list">
+        {% for item in info.ingredients %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if info.nutrition %}
+      <p><strong>Nährwerte pro 100 g:</strong></p>
+      <ul class="shop-info-list">
+        {% for item in info.nutrition %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if recommendation %}
+      <p class="shop-info-recommendation-label"><strong>Empfohlenes Produkt:</strong></p>
+      <a class="btn btn--primary btn--small shop-info-recommendation-link" href="#{{ recommendation.anchor_id }}">
+        {{ recommendation.name }}
+      </a>
+    {% endif %}
+  </div>
+</details>
+{% endif %}
