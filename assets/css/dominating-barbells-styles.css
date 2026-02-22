@@ -720,6 +720,12 @@ code {
     width: 100%;
 }
 
+.product-note--warning {
+    margin: 0.75rem 0 1rem;
+    color: #e6cf8d;
+    font-size: 0.9rem;
+}
+
 
 
 .product-custom {
@@ -754,6 +760,46 @@ code {
 
 
 /* Form */
+
+.competition-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.competition-links .btn {
+    margin-bottom: 0;
+    min-width: 170px;
+    text-align: center;
+}
+
+.competition-gallery-quad {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.8rem;
+    width: min(100%, 680px);
+    margin: 1rem auto 0;
+}
+
+.competition-gallery-quad > a {
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.competition-gallery-quad > a:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+.competition-gallery-quad > a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+}
 
 .competition-form {
     background-color: #1F1F1F;

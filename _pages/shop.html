@@ -17,69 +17,35 @@ excerpt: "**Wettkampf-Anmeldung & Powerlifting-Merch**"
   <br>
   <hr>
 
-  <!--
-
-  <section id="wettkaempfe" class="small-top-margin shop-section">
-    <h1 class="shop-heading">Wettkampf-Anmeldungen</h1>
+  <section id="wettkaempfe-preview" class="small-top-margin shop-section">
+    <h1 class="shop-heading">Wettkampf-Anmeldung (Codephase)</h1>
 
     <div class="shop-grid">
-
-      <div class="product-button-wrapper">
-        <div class="product-custom">
-          <img src="/images/dl-only.webp" alt="Anmeldung Deadlift Only" class="product-image">
-          <div class="product-title">Barbell Battle 2.0 Anmeldung: Deadlift-Only</div>
-          <div class="product-price">55 €</div>
-          <a href="/bb2-anmeldung-deadlift-only" class="btn btn--primary">Jetzt anmelden</a>
-        </div>
-      </div>
-
       <div class="product-button-wrapper">
         <div class="product-custom">
           <img src="/images/bench-only.webp" alt="Anmeldung Bench Only" class="product-image">
-          <div class="product-title">Barbell Battle 2.0 Anmeldung: Bench-Only</div>
-          <div class="product-price">55 €</div>
-          <a href="/bb2-anmeldung-bench-only" class="btn btn--primary">Jetzt anmelden</a>
-        </div>
-      </div>
-
-      <div class="product-button-wrapper">
-        <div class="product-custom">
-          <img src="/images/dl-and-bench.webp" alt="Anmeldung Deadlift & Bench" class="product-image">
-          <div class="product-title">Barbell Battle 2.0 Anmeldung: Bench & Deadlift</div>
-          <div class="product-price">85 €</div>
-          <a href="/bb2-anmeldung-bench-and-deadlift" class="btn btn--primary">Jetzt anmelden</a>
-        </div>
-      </div>
-
-
-
-    </div>
-
-    <div class="notice--primary">
-      <strong class="bigger">👕 Zeig, dass du dabei bist – dein offizielles Wettkampf-Shirt findest du direkt unten.</strong>
-    </div>
-
-    <div class="shop-grid">
-      <div class="product-button-wrapper center-single-product">
-        <div class="button-and-note">
-          {% include shop/barbell_battle_comp_shirt.html %}
-          <div class="product-note">
-            <strong>Hinweis:</strong> Wenn du dein Shirt beim Wettkampf abholen möchtest, wähle beim Checkout „Abholung im Shop“.
-          </div>
+          <div class="product-title">Barbell Battle 2026 Anmeldung: Bench-Only</div>
+          <div class="product-price">60 €</div>
+          <p class="product-note product-note--warning">
+            Aktuell nur mit Code verf&uuml;gbar. &Ouml;ffentliche Anmeldung ab 19. April 2026.
+          </p>
+          <a
+            href="#"
+            class="btn btn--primary js-signup-code-trigger"
+            data-target-key="bench_only"
+          >
+            Mit Code anmelden
+          </a>
         </div>
       </div>
     </div>
-
-
-
   </section>
 
   <br>
   <hr>
-  -->
 
   <section id="merch" class="shop-section">
-    <h1 class="shop-heading">Merchandise & Weiteres</h1>
+    <h1 class="shop-heading">Merchandise</h1>
 
     <div class="shop-grid">
 
@@ -90,6 +56,22 @@ excerpt: "**Wettkampf-Anmeldung & Powerlifting-Merch**"
         </div>
       </div>
 
+      <div class="product-button-wrapper" id="product-power-to-lift-performance">
+        <div class="shop-product-card">
+          {% include shop/power_to_lift_perform.html %}
+          {% include shop/product_info_toggle.html info_key="power_to_lift_performance" %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+  <hr>
+
+  <section id="nutrition" class="shop-section">
+    <h1 class="shop-heading">Nutrition</h1>
+
+    <div class="shop-grid">
       <div class="product-button-wrapper" id="product-schokamoli-vanille-mandel">
         <div class="shop-product-card">
           {% include shop/schokamoli-bar.html %}
@@ -110,14 +92,18 @@ excerpt: "**Wettkampf-Anmeldung & Powerlifting-Merch**"
           {% include shop/product_info_toggle.html info_key="schokamoli_schoko_haselnuss" %}
         </div>
       </div>
-
-      <div class="product-button-wrapper" id="product-power-to-lift-performance">
-        <div class="shop-product-card">
-          {% include shop/power_to_lift_perform.html %}
-          {% include shop/product_info_toggle.html info_key="power_to_lift_performance" %}
-        </div>
-      </div>
     </div>
   </section>
 
 </section>
+
+<script src="/assets/js/signup-code-gate.js"></script>
+<script>
+  (function () {
+    if (!window.DBBSignupGate) {
+      return;
+    }
+
+    window.DBBSignupGate.bindTriggers('.js-signup-code-trigger');
+  })();
+</script>
