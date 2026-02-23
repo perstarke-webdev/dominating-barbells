@@ -1,8 +1,8 @@
 (function (window) {
   'use strict';
 
-  var expectedHash = '94ee059335e587e501cc4bf90613e0814f00a7b08bc7c648fd865a2af6a22cc2';
-  var fallbackCodeEncoded = 'VEVTVA==';
+  var expectedHash = 'c566b260e1d8199f49d3000c3a3525d6eceb60df7789873290c06978a8e72255';
+  var fallbackCodeEncoded = 'QkItMjAyNi1FQQ==';
   var accessKey = 'dbb_signup_access_ts';
   var accessLifetimeMs = 6 * 60 * 60 * 1000;
   var encodedPaths = {
