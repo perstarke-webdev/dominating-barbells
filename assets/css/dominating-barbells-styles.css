@@ -785,6 +785,11 @@ code {
     object-fit: cover;
 }
 
+.shop-product-gallery-existing--square > a img,
+.shop-product-gallery-existing--square > img {
+    aspect-ratio: 1 / 1;
+}
+
 .shop-product-gallery-existing--4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }

@@ -52,3 +52,29 @@ products:
       - url: "/images/shop/power%20to%20lift%20performance%20-4.webp"
         image_path: "/images/shop/power%20to%20lift%20performance%20-4.webp"
         alt: "Power to Lift Performance Shirt Ansicht 4"
+
+  - key: barbell_battle_2026_athlete_shirt
+    name: "Barbell Battle 2026 Athlete Shirt"
+    price: "24,90 €"
+    url: "/shop/barbell-battle-2026-athlete-shirt/"
+    card_image: "/images/shop/barbell-battle-athlete-shirt-placeholder.webp"
+    card_image_alt: "Barbell Battle 2026 Athlete Shirt"
+    summary: "Official Athlete Shirt für Barbell Battle 2026."
+    intro:
+      - "Das Barbell Battle 2026 Athlete Shirt bringt den Wettkampf-Look direkt in dein Training."
+      - "Klare Event-Optik für Athletinnen und Athleten, auf und neben der Plattform."
+    highlights:
+      - "Athlete Shirt Design im Barbell Battle 2026 Style."
+      - "Leichter, alltagstauglicher Fit für Gym und Event."
+    sizes: "S-3XL"
+    gallery_square: true
+    gallery:
+      - url: "/images/shop/barbell-battle-athlete-shirt-placeholder.webp"
+        image_path: "/images/shop/barbell-battle-athlete-shirt-placeholder.webp"
+        alt: "Barbell Battle 2026 Athlete Shirt Ansicht 1"
+      - url: "/images/barbell-battle/Barbell%20Battle%20Recap-3.webp"
+        image_path: "/images/barbell-battle/Barbell%20Battle%20Recap-3.webp"
+        alt: "Barbell Battle 2026 Athlete Shirt Platzhalter Ansicht 2"
+      - url: "/images/barbell-battle/Barbell%20Battle%20Recap-4.webp"
+        image_path: "/images/barbell-battle/Barbell%20Battle%20Recap-4.webp"
+        alt: "Barbell Battle 2026 Athlete Shirt Platzhalter Ansicht 3"

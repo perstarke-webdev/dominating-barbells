@@ -3,6 +3,9 @@
 {% assign recommended_products = products | where_exp: "item", "item.key != product.key" %}
 {% assign gallery_count = product.gallery | size %}
 {% assign gallery_class = "shop-product-gallery-existing shop-product-gallery-existing--" | append: gallery_count %}
+{% if product.gallery_square %}
+  {% assign gallery_class = gallery_class | append: " shop-product-gallery-existing--square" %}
+{% endif %}
 
 {% if product %}
   <section class="shop-product-page">
