@@ -48,50 +48,11 @@ excerpt: "**Wettkampf-Anmeldung & Powerlifting-Merch**"
     <h1 class="shop-heading">Merchandise</h1>
 
     <div class="shop-grid">
-
-      <div class="product-button-wrapper" id="product-power-to-lift-oversized">
-        <div class="shop-product-card">
-          {% include shop/power_to_lift_shirt.html %}
-          {% include shop/product_info_toggle.html info_key="power_to_lift_oversized" %}
+      {% for product in site.data.shop_merch.products %}
+        <div class="product-button-wrapper" id="product-{{ product.key | replace: "_", "-" }}">
+          {% include shop/product_card.html product=product cta="Details ansehen" %}
         </div>
-      </div>
-
-      <div class="product-button-wrapper" id="product-power-to-lift-performance">
-        <div class="shop-product-card">
-          {% include shop/power_to_lift_perform.html %}
-          {% include shop/product_info_toggle.html info_key="power_to_lift_performance" %}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <br>
-  <hr>
-
-  <section id="nutrition" class="shop-section">
-    <h1 class="shop-heading">Nutrition</h1>
-
-    <div class="shop-grid">
-      <div class="product-button-wrapper" id="product-schokamoli-vanille-mandel">
-        <div class="shop-product-card">
-          {% include shop/schokamoli-bar.html %}
-          {% include shop/product_info_toggle.html info_key="schokamoli_vanille_mandel" %}
-        </div>
-      </div>
-
-      <div class="product-button-wrapper" id="product-schokamoli-salz-erdnuss">
-        <div class="shop-product-card">
-          {% include shop/Schokamoli-bar-salz.html %}
-          {% include shop/product_info_toggle.html info_key="schokamoli_salz_erdnuss" %}
-        </div>
-      </div>
-
-      <div class="product-button-wrapper" id="product-schokamoli-schoko-haselnuss">
-        <div class="shop-product-card">
-          {% include shop/Schokamoli-Bar-Schoko.html %}
-          {% include shop/product_info_toggle.html info_key="schokamoli_schoko_haselnuss" %}
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
 

@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% assign product = site.data.shop_merch.products | where: "key", page.product_key | first %}
+
+<div id="main" role="main">
+  <article class="splash shop-product-layout" itemscope itemtype="https://schema.org/CreativeWork">
+    {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
+    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
+    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
+
+    <header class="shop-product-layout-hero">
+      <p class="shop-product-layout-hero__kicker">Dominating Barbells Shop</p>
+      <h1 class="shop-product-layout-hero__title">{{ page.title }}</h1>
+      {% if product and product.price %}
+        <p class="shop-product-layout-hero__price">{{ product.price }}</p>
+      {% endif %}
+    </header>
+
+    <section class="page__content shop-product-layout-content" itemprop="text">
+      {{ content }}
+    </section>
+  </article>
+</div>

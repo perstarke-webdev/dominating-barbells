@@ -1,0 +1,54 @@
+products:
+  - key: power_to_lift_oversized
+    name: "Power to Lift Oversized Shirt"
+    price: "39,90 €"
+    url: "/shop/power-to-lift-oversized-shirt/"
+    card_image: "/images/shop/Power%20to%20Lift%20Oversized%20-1.webp"
+    card_image_alt: "Power to Lift Oversized Shirt"
+    summary: "Erlebe die Power to Lift Mentalität mit starkem Backprint und optimalem Oversized Fit."
+    intro:
+      - "Erlebe die Power to Lift Mentalität: ein T-Shirt, das nicht nur Qualität, sondern auch deine Werte repräsentiert."
+      - "Zeige, was in dir steckt, mit dem großen Power to Lift Backprint."
+      - "Qualität im Training und im Alltag."
+    highlights:
+      - "100 % hochwertige Baumwolle und ein optimales Oversized Fitting."
+    sizes: "XS-5XL"
+    gallery:
+      - url: "/images/shop/Power%20to%20Lift%20Oversized%20-1.webp"
+        image_path: "/images/shop/Power%20to%20Lift%20Oversized%20-1.webp"
+        alt: "Power to Lift Oversized Shirt Ansicht 1"
+      - url: "/images/shop/Power%20to%20Lift%20Oversized%20-2.webp"
+        image_path: "/images/shop/Power%20to%20Lift%20Oversized%20-2.webp"
+        alt: "Power to Lift Oversized Shirt Ansicht 2"
+      - url: "/images/shop/Power%20to%20Lift%20Oversized%20-3.webp"
+        image_path: "/images/shop/Power%20to%20Lift%20Oversized%20-3.webp"
+        alt: "Power to Lift Oversized Shirt Ansicht 3"
+
+  - key: power_to_lift_performance
+    name: "Power to Lift Performance Shirt"
+    price: "29,90 €"
+    url: "/shop/power-to-lift-performance-shirt/"
+    card_image: "/images/shop/power%20to%20lift%20performance%20-1.webp"
+    card_image_alt: "Power to Lift Performance Shirt"
+    summary: "Erfahre, wo wahre Power entsteht, mit sportlichem Fit und schweißabweisendem Material."
+    intro:
+      - "Erlebe die Power to Lift Mentalität und erfahre, wo wahre Power entsteht."
+      - "Jeder sieht das Ergebnis, aber niemand den Weg, den du dafür gegangen bist."
+      - "Zeige deine Werte im Training und im Alltag."
+    highlights:
+      - "Schweißabweisendes Material, optimal für dein Training."
+      - "Ein angepasster Fit, der zeigt, wo deine Stärken liegen."
+    sizes: "S-3XL"
+    gallery:
+      - url: "/images/shop/power%20to%20lift%20performance%20-1.webp"
+        image_path: "/images/shop/power%20to%20lift%20performance%20-1.webp"
+        alt: "Power to Lift Performance Shirt Ansicht 1"
+      - url: "/images/shop/power%20to%20lift%20performance%20-2.webp"
+        image_path: "/images/shop/power%20to%20lift%20performance%20-2.webp"
+        alt: "Power to Lift Performance Shirt Ansicht 2"
+      - url: "/images/shop/power%20to%20lift%20performance%20-3.webp"
+        image_path: "/images/shop/power%20to%20lift%20performance%20-3.webp"
+        alt: "Power to Lift Performance Shirt Ansicht 3"
+      - url: "/images/shop/power%20to%20lift%20performance%20-4.webp"
+        image_path: "/images/shop/power%20to%20lift%20performance%20-4.webp"
+        alt: "Power to Lift Performance Shirt Ansicht 4"

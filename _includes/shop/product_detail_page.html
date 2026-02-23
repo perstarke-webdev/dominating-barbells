@@ -1,0 +1,56 @@
+{% assign products = site.data.shop_merch.products %}
+{% assign product = products | where: "key", include.product_key | first %}
+{% assign recommended_products = products | where_exp: "item", "item.key != product.key" %}
+{% assign gallery_count = product.gallery | size %}
+{% assign gallery_class = "shop-product-gallery-existing shop-product-gallery-existing--" | append: gallery_count %}
+
+{% if product %}
+  <section class="shop-product-page">
+    <div class="shop-product-page__back-link">
+      <a href="/shop/#merch" class="btn btn--light-outline btn--small">Zurück zum Shop</a>
+    </div>
+
+    <section class="shop-product-gallery-full" aria-label="Produktgalerie">
+      {% include gallery gallery=product.gallery class=gallery_class %}
+    </section>
+
+    <section class="shop-product-details">
+      {% if product.intro %}
+        {% for line in product.intro %}
+          <p class="shop-product-details__intro">{{ line }}</p>
+        {% endfor %}
+      {% elsif product.teaser %}
+        <p class="shop-product-details__intro">{{ product.teaser }}</p>
+      {% endif %}
+
+      {% if product.highlights %}
+        <h2 class="shop-product-details__heading">Highlights</h2>
+        <ul class="shop-product-details__list">
+          {% for point in product.highlights %}
+            <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if product.sizes %}
+        <h2 class="shop-product-details__heading">Größen</h2>
+        <p class="shop-product-details__sizes">{{ product.sizes }}</p>
+      {% endif %}
+
+      <div class="shop-product-buy-box">
+        {% include shop/product_buy_button.html product_key=product.key %}
+      </div>
+    </section>
+
+    <section class="shop-recommended-products">
+      <h2 class="shop-recommended-products__title">Empfohlene Produkte</h2>
+      <div class="shop-grid shop-grid--recommended">
+        {% for recommendation in recommended_products limit: 3 %}
+          <div class="product-button-wrapper">
+            {% include shop/product_card.html product=recommendation compact=true cta="Zum Produkt" %}
+          </div>
+        {% endfor %}
+      </div>
+    </section>
+  </section>
+{% endif %}
