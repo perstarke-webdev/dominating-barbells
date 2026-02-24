@@ -1,0 +1,18 @@
+{% case include.key %}
+  {% when "bench_only" %}
+    {% include shop/bb26_signup_bench_only.html %}
+  {% when "bench_only_unofficial" %}
+    {% include shop/bb26_signup_bench_only_unofficial.html %}
+  {% when "deadlift_only" %}
+    {% include shop/bb26_signup_deadlift_only.html %}
+  {% when "deadlift_only_unofficial" %}
+    {% include shop/bb26_signup_deadlift_only_unofficial.html %}
+  {% when "bench_deadlift" %}
+    {% include shop/bb26_signup_bench_deadlift.html %}
+  {% when "bench_deadlift_unofficial" %}
+    {% include shop/bb26_signup_bench_deadlift_unofficial.html %}
+  {% when "kraftdreikampf" %}
+    {% include shop/bb26_signup_kraftdreikampf.html %}
+  {% when "coach_pass" %}
+    {% include shop/bb26_signup_coach_pass.html %}
+{% endcase %}

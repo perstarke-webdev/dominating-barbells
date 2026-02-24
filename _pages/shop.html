@@ -21,23 +21,11 @@ excerpt: "**Wettkampf-Anmeldung & Powerlifting-Merch**"
     <h1 class="shop-heading">Wettkampf-Anmeldung (Codephase)</h1>
 
     <div class="shop-grid">
-      <div class="product-button-wrapper">
-        <div class="product-custom">
-          <img src="/images/bench-only.webp" alt="Anmeldung Bench Only" class="product-image">
-          <div class="product-title">Barbell Battle 2026 Anmeldung: Bench-Only</div>
-          <div class="product-price">60 €</div>
-          <p class="product-note product-note--warning">
-            Aktuell nur mit Code verf&uuml;gbar. &Ouml;ffentliche Anmeldung ab 19. April 2026.
-          </p>
-          <a
-            href="#"
-            class="btn btn--primary js-signup-code-trigger"
-            data-target-key="bench_only"
-          >
-            Mit Code anmelden
-          </a>
+      {% for signup in site.data.shop_competition_signups.signups %}
+        <div class="product-button-wrapper">
+          {% include shop/competition_signup_card.html signup=signup %}
         </div>
-      </div>
+      {% endfor %}
     </div>
   </section>
 

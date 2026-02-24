@@ -6,7 +6,14 @@
   var accessKey = 'dbb_signup_access_ts';
   var accessLifetimeMs = 6 * 60 * 60 * 1000;
   var encodedPaths = {
-    bench_only: 'L2JiMi1hbm1lbGR1bmctYmVuY2gtb25seQ=='
+    bench_only: 'L2JiMjYtYW5tZWxkdW5nLWJlbmNoLW9ubHk=',
+    bench_only_unofficial: 'L2JiMjYtYW5tZWxkdW5nLWJlbmNoLW9ubHktdW5vZmZpY2lhbA==',
+    deadlift_only: 'L2JiMjYtYW5tZWxkdW5nLWRlYWRsaWZ0LW9ubHk=',
+    deadlift_only_unofficial: 'L2JiMjYtYW5tZWxkdW5nLWRlYWRsaWZ0LW9ubHktdW5vZmZpY2lhbA==',
+    bench_deadlift: 'L2JiMjYtYW5tZWxkdW5nLWJlbmNoLWFuZC1kZWFkbGlmdA==',
+    bench_deadlift_unofficial: 'L2JiMjYtYW5tZWxkdW5nLWJlbmNoLWFuZC1kZWFkbGlmdC11bm9mZmljaWFs',
+    kraftdreikampf: 'L2JiMjYtYW5tZWxkdW5nLWtyYWZ0ZHJlaWthbXBm',
+    coach_pass: 'L2JiMjYtYW5tZWxkdW5nLWNvYWNoLXBhc3M='
   };
 
   function toHex(buffer) {

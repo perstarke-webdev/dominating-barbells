@@ -686,6 +686,23 @@ code {
     font-size: 1.05rem;
 }
 
+.competition-signup-card .shop-product-link-card__inner {
+    align-items: flex-start;
+}
+
+.competition-signup-card .shop-product-link-card__summary {
+    margin-bottom: 0.8rem;
+}
+
+.competition-signup-card .product-note--warning {
+    margin: 0 0 1rem;
+    text-align: left;
+}
+
+.competition-signup-card .js-signup-code-trigger {
+    margin-top: auto;
+}
+
 .shop-grid--recommended {
     gap: 24px;
 }
