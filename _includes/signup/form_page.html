@@ -15,6 +15,28 @@
     <input type="hidden" name="Anmeldungstyp" value="{{ include.signup_type }}">
     <input type="hidden" name="signup_version" value="{{ include.signup_version | default: include.signup_type }}">
 
+    <div class="form-group">
+      <label for="{{ include.form_id }}-last-name">Name</label>
+      <input type="text" id="{{ include.form_id }}-last-name" name="Name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ include.form_id }}-first-name">Vorname</label>
+      <input type="text" id="{{ include.form_id }}-first-name" name="Vorname" required>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ include.form_id }}-email">E-Mail</label>
+      <input type="email" id="{{ include.form_id }}-email" name="E-Mail" required>
+    </div>
+
+    {% if include.show_phone != false %}
+      <div class="form-group">
+        <label for="{{ include.form_id }}-phone">Telefon Nummer</label>
+        <input type="text" id="{{ include.form_id }}-phone" name="Telefon Nummer" required>
+      </div>
+    {% endif %}
+
     {% if include.show_gender != false %}
       <div class="form-group">
         <label for="{{ include.form_id }}-gender">Geschlecht</label>
@@ -25,19 +47,16 @@
       </div>
     {% endif %}
 
-    <div class="form-group">
-      <label for="{{ include.form_id }}-first-name">Vorname</label>
-      <input type="text" id="{{ include.form_id }}-first-name" name="Vorname" required>
-    </div>
+    {% if include.show_birthdate != false %}
+      <div class="form-group">
+        <label for="{{ include.form_id }}-birthdate">Geburtsdatum</label>
+        <input type="date" id="{{ include.form_id }}-birthdate" name="Geburtsdatum" required>
+      </div>
+    {% endif %}
 
     <div class="form-group">
-      <label for="{{ include.form_id }}-last-name">Nachname</label>
-      <input type="text" id="{{ include.form_id }}-last-name" name="Nachname" required>
-    </div>
-
-    <div class="form-group">
-      <label for="{{ include.form_id }}-street">Straße und Hausnummer</label>
-      <input type="text" id="{{ include.form_id }}-street" name="Straße und Hausnummer" required>
+      <label for="{{ include.form_id }}-street">Straße, Hausnummer</label>
+      <input type="text" id="{{ include.form_id }}-street" name="Straße, Hausnummer" required>
     </div>
 
     <div class="form-group">
@@ -55,43 +74,27 @@
       <input type="text" id="{{ include.form_id }}-country" name="Land" required>
     </div>
 
-    {% if include.show_phone != false %}
+    {% if include.show_deadlift == true %}
+      {% assign deadlift_label = include.deadlift_field_label | default: "Aktuelle Bestleistung im Kreuzheben (Wettkampf/Training)" %}
       <div class="form-group">
-        <label for="{{ include.form_id }}-phone">Telefonnummer</label>
-        <input type="text" id="{{ include.form_id }}-phone" name="Telefonnummer" required>
-      </div>
-    {% endif %}
-
-    <div class="form-group">
-      <label for="{{ include.form_id }}-email">E-Mail</label>
-      <input type="email" id="{{ include.form_id }}-email" name="Email" required>
-    </div>
-
-    {% if include.show_birthdate != false %}
-      <div class="form-group">
-        <label for="{{ include.form_id }}-birthdate">Geburtsdatum</label>
-        <input type="date" id="{{ include.form_id }}-birthdate" name="Geburtsdatum" required>
+        <label for="{{ include.form_id }}-bestleistung-deadlift">{{ deadlift_label }}</label>
+        <input type="text" id="{{ include.form_id }}-bestleistung-deadlift" name="{{ deadlift_label }}" required>
       </div>
     {% endif %}
 
     {% if include.show_bench == true %}
+      {% assign bench_label = include.bench_field_label | default: "Aktuelle Bestleistung im Bankdrücken (Wettkampf/Training)" %}
       <div class="form-group">
-        <label for="{{ include.form_id }}-bestleistung-bench">Aktuelle Bestleistung Bankdrücken</label>
-        <input type="text" id="{{ include.form_id }}-bestleistung-bench" name="Aktuelle Bestleistung Bankdrücken" required>
-      </div>
-    {% endif %}
-
-    {% if include.show_deadlift == true %}
-      <div class="form-group">
-        <label for="{{ include.form_id }}-bestleistung-deadlift">Aktuelle Bestleistung Kreuzheben</label>
-        <input type="text" id="{{ include.form_id }}-bestleistung-deadlift" name="Aktuelle Bestleistung Kreuzheben" required>
+        <label for="{{ include.form_id }}-bestleistung-bench">{{ bench_label }}</label>
+        <input type="text" id="{{ include.form_id }}-bestleistung-bench" name="{{ bench_label }}" required>
       </div>
     {% endif %}
 
     {% if include.show_dots == true %}
+      {% assign dots_label = include.dots_field_label | default: "Aktuelle Dots Bestleistung (Newcomer bitte 0 eintragen)" %}
       <div class="form-group">
-        <label for="{{ include.form_id }}-bestleistung-dots">Aktuelle Bestleistung DOTS (Siehe Open Powerlifting)</label>
-        <input type="text" id="{{ include.form_id }}-bestleistung-dots" name="Aktuelle Bestleistung DOTS" required>
+        <label for="{{ include.form_id }}-bestleistung-dots">{{ dots_label }}</label>
+        <input type="text" id="{{ include.form_id }}-bestleistung-dots" name="{{ dots_label }}" required>
       </div>
     {% endif %}
 
