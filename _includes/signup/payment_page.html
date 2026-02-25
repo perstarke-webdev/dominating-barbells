@@ -1,0 +1,58 @@
+<script src="/assets/js/signup-code-gate.js"></script>
+<script>
+  (function () {
+    if (window.DBBSignupGate) {
+      window.DBBSignupGate.enforceAccess('/shop/');
+    }
+  })();
+</script>
+
+<section class="content">
+  <h1 class="home-heading-one">Bezahlung deiner Anmeldung: {{ include.signup_type }}</h1>
+  <br>
+  <hr>
+
+  <div class="notice--primary">
+    <p class="bigger center bold">
+      <i class="fas fa-exclamation margin-right gold fa-lg"></i> Die Anmeldung wird abgeschlossen, indem du die Wettkampf-Anmeldung in den Warenkorb legst und bezahlst
+    </p>
+  </div>
+
+  <h3 class="center">Hol dir doch noch dein Wettkampf-Shirt dazu!</h3>
+  <br>
+
+  <div class="shop-grid">
+    <div class="product-button-wrapper center-single-product">
+      <div class="button-and-note">
+        <img
+          src="/images/shop/barbell-battle-athlete-shirt-placeholder.webp"
+          alt="Barbell Battle 2026 Athlete Shirt"
+          class="shop-product-link-card__image"
+        >
+        {% include shop/barbell_battle_2026_athlete_shirt.html %}
+        <div class="product-note">
+          <strong>Hinweis:</strong> Wenn du dein Shirt beim Wettkampf abholen möchtest, wähle beim Checkout „Abholung im Shop“.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <hr>
+
+  <div class="shop-grid">
+    <div class="product-button-wrapper">
+      {% if include.buy_button_key %}
+        {% include shop/bb26_signup_buy_button.html key=include.buy_button_key %}
+      {% else %}
+        {% include shop/barbell_battle_2026_signup_placeholder.html %}
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="notice--primary">
+    <strong>Probleme bei der Anmeldung?</strong><br>
+    Schreib mir einfach kurz <a href="https://wa.link/6abzb0" target="_blank" rel="noopener noreferrer nofollow">auf WhatsApp</a> – ich melde mich innerhalb von 24 Stunden bei dir!
+    <br><br>
+  </div>
+</section>

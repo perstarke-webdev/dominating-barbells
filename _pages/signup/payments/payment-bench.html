@@ -7,8 +7,18 @@ header:
   overlay_filter: rgba(0, 0, 0, 0.6)
 
 excerpt: " "
+sitemap: false
 
 ---
+
+<script src="/assets/js/signup-code-gate.js"></script>
+<script>
+  (function () {
+    if (window.DBBSignupGate) {
+      window.DBBSignupGate.enforceAccess('/shop/');
+    }
+  })();
+</script>
 
 <section class="content">
 
@@ -55,5 +65,4 @@ excerpt: " "
   </div>
 
 </section>
-
 

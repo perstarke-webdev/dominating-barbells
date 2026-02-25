@@ -1,4 +1,12 @@
-<div id='product-component-1751757923722'></div>
+<style>
+  #product-component-1771990517328 .shopify-buy__option-select__label,
+  #product-component-1771990517328 .shopify-buy__option-select,
+  #product-component-1771990517328 .shopify-buy__option-select__select,
+  #product-component-1771990517328 .shopify-buy__select-icon {
+    color: #ffffff !important;
+  }
+</style>
+<div id='product-component-1771990517328'></div>
 <script type="text/javascript">
 /*<![CDATA[*/
 (function () {
@@ -26,8 +34,8 @@
     });
     ShopifyBuy.UI.onReady(client).then(function (ui) {
       ui.createComponent('product', {
-        id: '15143512670533',
-        node: document.getElementById('product-component-1751757923722'),
+        id: '15710086365509',
+        node: document.getElementById('product-component-1771990517328'),
         moneyFormat: '%E2%82%AC%7B%7Bamount_with_comma_separator%7D%7D',
         options: {
   "product": {
@@ -40,7 +48,7 @@
         }
       },
       "title": {
-        "color": "#ffffff"
+        "color": "#000000"
       },
       "button": {
         ":hover": {
@@ -50,19 +58,24 @@
         ":focus": {
           "background-color": "#af8d37"
         },
-        "border-radius": "5px",
+        "border-radius": "6px",
         "padding-left": "60px",
         "padding-right": "60px"
       },
       "price": {
-        "color": "#ffffff"
+        "color": "#000000"
       },
       "compareAt": {
-        "color": "#ffffff"
+        "color": "#000000"
       },
       "unitPrice": {
-        "color": "#ffffff"
+        "color": "#000000"
       }
+    },
+    "contents": {
+      "img": false,
+      "title": false,
+      "price": false
     },
     "text": {
       "button": "Zum Warenkorb hinzufügen"
@@ -100,7 +113,7 @@
         ":focus": {
           "background-color": "#af8d37"
         },
-        "border-radius": "5px",
+        "border-radius": "6px",
         "padding-left": "60px",
         "padding-right": "60px"
       },
@@ -133,7 +146,18 @@
       "button": "Add to cart"
     }
   },
-  "option": {},
+  "option": {
+    "styles": {
+      "label": {
+        "color": "#ffffff"
+      },
+      "select": {
+        "color": "#ffffff",
+        "background-color": "#1b1b1b",
+        "border": "1px solid #c29d3d"
+      }
+    }
+  },
   "cart": {
     "styles": {
       "button": {
@@ -144,7 +168,7 @@
         ":focus": {
           "background-color": "#af8d37"
         },
-        "border-radius": "5px"
+        "border-radius": "6px"
       }
     },
     "text": {

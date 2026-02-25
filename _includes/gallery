@@ -1,4 +1,6 @@
-{% if include.id %}
+{% if include.gallery %}
+  {% assign gallery = include.gallery %}
+{% elsif include.id %}
   {% assign gallery = page[include.id] %}
 {% else %}
   {% assign gallery = page.gallery %}
@@ -22,11 +24,13 @@
       <a href="{{ img.url | relative_url }}"
         {% if img.title %}title="{{ img.title }}"{% endif %}>
           <img src="{{ img.image_path | relative_url }}"
-               alt="{% if img.alt %}{{ img.alt }}{% endif %}">
+               alt="{% if img.alt %}{{ img.alt }}{% endif %}"
+               {% if img.image_position %}style="object-position: {{ img.image_position }};"{% endif %}>
       </a>
     {% else %}
       <img src="{{ img.image_path | relative_url }}"
-           alt="{% if img.alt %}{{ img.alt }}{% endif %}">
+           alt="{% if img.alt %}{{ img.alt }}{% endif %}"
+           {% if img.image_position %}style="object-position: {{ img.image_position }};"{% endif %}>
     {% endif %}
   {% endfor %}
   {% if include.caption %}

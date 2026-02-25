@@ -1,0 +1,27 @@
+{% assign signup = include.signup %}
+{% if signup %}
+  <article class="shop-product-link-card competition-signup-card">
+    <div class="shop-product-link-card__inner">
+      <img
+        src="{{ signup.image }}"
+        alt="{{ signup.image_alt | default: signup.name }}"
+        class="shop-product-link-card__image"
+      >
+      <h3 class="shop-product-link-card__title">{{ signup.name }}</h3>
+      <p class="shop-product-link-card__price">{{ signup.price }}</p>
+      {% if signup.summary %}
+        <p class="shop-product-link-card__summary">{{ signup.summary }}</p>
+      {% endif %}
+      <p class="product-note product-note--warning">
+        Aktuell nur mit Code verf&uuml;gbar. &Ouml;ffentliche Anmeldung ab 19. April 2026.
+      </p>
+      <button
+        type="button"
+        class="btn btn--primary js-signup-code-trigger"
+        data-target-key="{{ signup.gate_key }}"
+      >
+        Mit Code anmelden
+      </button>
+    </div>
+  </article>
+{% endif %}

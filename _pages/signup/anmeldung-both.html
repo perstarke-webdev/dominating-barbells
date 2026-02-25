@@ -7,14 +7,25 @@ header:
   overlay_filter: rgba(0, 0, 0, 0.6)
 
 excerpt: " "
+sitemap: false
 
 ---
+
+<script src="/assets/js/signup-code-gate.js"></script>
+<script>
+  (function () {
+    if (window.DBBSignupGate) {
+      window.DBBSignupGate.enforceAccess('/shop/');
+    }
+  })();
+</script>
 
 <section class="content">
 
   <h1 class="home-heading-one">Fülle bitte das untenstehende Formular aus</h1>
 
   <form action="https://formspree.io/f/xkgrovav" method="POST" class="competition-form">
+    <input type="hidden" name="_next" value="/bb2-zahlung-bench-and-deadlift-uc547vr">
     <div class="form-group">
       <label for="gender">Geschlecht</label>
       <select id="gender" name="Geschlecht" required>
@@ -107,4 +118,18 @@ excerpt: " "
 
 </section>
 
+<script>
+  (function () {
+    var form = document.querySelector('.competition-form');
+    if (!form) {
+      return;
+    }
 
+    var nextField = form.querySelector('input[name="_next"]');
+    if (!nextField || !nextField.value) {
+      return;
+    }
+
+    nextField.value = new URL(nextField.value, window.location.origin).toString();
+  })();
+</script>

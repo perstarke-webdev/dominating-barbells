@@ -1,0 +1,20 @@
+{% assign product = include.product %}
+{% if product %}
+  <article class="shop-product-link-card{% if include.compact %} shop-product-link-card--compact{% endif %}">
+    <a class="shop-product-link-card__inner" href="{{ product.url }}">
+      <img
+        src="{{ product.card_image }}"
+        alt="{{ product.card_image_alt | default: product.name }}"
+        class="shop-product-link-card__image"
+      >
+      <h3 class="shop-product-link-card__title">{{ product.name }}</h3>
+      <p class="shop-product-link-card__price">{{ product.price }}</p>
+      {% if include.show_summary != false and product.summary %}
+        <p class="shop-product-link-card__summary">{{ product.summary }}</p>
+      {% endif %}
+      <span class="btn btn--primary btn--small shop-product-link-card__cta">
+        {{ include.cta | default: "Zum Produkt" }}
+      </span>
+    </a>
+  </article>
+{% endif %}
