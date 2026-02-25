@@ -130,6 +130,66 @@
       return;
     }
 
-    nextField.value = new URL(nextField.value, window.location.origin).toString();
+    var nextUrl = new URL(nextField.value, window.location.origin).toString();
+    nextField.value = nextUrl;
+
+    var redirectField = form.querySelector('input[name="_redirect"]');
+    if (!redirectField) {
+      redirectField = document.createElement('input');
+      redirectField.type = 'hidden';
+      redirectField.name = '_redirect';
+      form.appendChild(redirectField);
+    }
+    redirectField.value = nextUrl;
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var submitButton = form.querySelector('button[type="submit"]');
+      if (submitButton) {
+        submitButton.disabled = true;
+      }
+
+      // Formspree can accept the submission while the browser blocks response parsing.
+      // We always forward to the configured payment page after submit attempt.
+      fetch(form.action, {
+        method: (form.method || 'POST').toUpperCase(),
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json'
+        }
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            return response
+              .json()
+              .then(function (data) {
+                var message = 'Beim Senden ist ein Fehler aufgetreten. Bitte versuche es erneut.';
+                if (data && data.errors && data.errors.length) {
+                  message = data.errors
+                    .map(function (item) {
+                      return item.message;
+                    })
+                    .join(' ');
+                }
+                throw new Error(message);
+              })
+              .catch(function () {
+                throw new Error('Beim Senden ist ein Fehler aufgetreten. Bitte versuche es erneut.');
+              });
+          }
+
+          window.location.href = nextUrl;
+          return null;
+        })
+        .catch(function () {
+          window.location.href = nextUrl;
+        })
+        .finally(function () {
+          if (submitButton) {
+            submitButton.disabled = false;
+          }
+        });
+    });
   })();
 </script>
