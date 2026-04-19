@@ -18,7 +18,7 @@ excerpt: "**Wettkampf-Anmeldung Powerlifting & Sportbekleidung**"
   <hr>
 
   <section id="wettkaempfe-preview" class="small-top-margin shop-section">
-    <h1 class="shop-heading">Wettkampf-Anmeldung (Early-Acess)</h1>
+    <h1 class="shop-heading">Wettkampf-Anmeldung</h1>
 
     <div class="shop-grid">
       {% for signup in site.data.shop_competition_signups.signups %}
@@ -45,14 +45,3 @@ excerpt: "**Wettkampf-Anmeldung Powerlifting & Sportbekleidung**"
   </section>
 
 </section>
-
-<script src="/assets/js/signup-code-gate.js"></script>
-<script>
-  (function () {
-    if (!window.DBBSignupGate) {
-      return;
-    }
-
-    window.DBBSignupGate.bindTriggers('.js-signup-code-trigger');
-  })();
-</script>

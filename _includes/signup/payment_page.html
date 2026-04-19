@@ -1,11 +1,13 @@
-<script src="/assets/js/signup-code-gate.js"></script>
-<script>
-  (function () {
-    if (window.DBBSignupGate) {
-      window.DBBSignupGate.enforceAccess('/shop/');
-    }
-  })();
-</script>
+{% if include.require_signup_code != false %}
+  <script src="/assets/js/signup-code-gate.js"></script>
+  <script>
+    (function () {
+      if (window.DBBSignupGate) {
+        window.DBBSignupGate.enforceAccess('/shop/');
+      }
+    })();
+  </script>
+{% endif %}
 
 <section class="content">
   <h1 class="home-heading-one">Bezahlung deiner Anmeldung: {{ include.signup_type }}</h1>

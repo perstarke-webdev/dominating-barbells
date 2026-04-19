@@ -1,5 +1,6 @@
 signups:
   - gate_key: bench_only
+    signup_path: "/bb26-anmeldung-bench-only"
     name: "Barbell Battle 2026 Anmeldung: Bench-Only"
     price: "60 €"
     image: "/images/bb26/Bench%20Only.webp"
@@ -7,6 +8,7 @@ signups:
     summary: "Klassische Bench-Only Anmeldung für die offizielle Klasse."
 
   - gate_key: bench_only_unofficial
+    signup_path: "/bb26-anmeldung-bench-only-unofficial"
     name: "Barbell Battle 2026 Anmeldung: Bench-Only (Unofficial)"
     price: "60 €"
     image: "/images/bb26/Bench%20Inoffizielle.webp"
@@ -14,6 +16,7 @@ signups:
     summary: "Bench-Only Anmeldung für die Unofficial-Klasse ohne Singlet."
 
   - gate_key: deadlift_only
+    signup_path: "/bb26-anmeldung-deadlift-only"
     name: "Barbell Battle 2026 Anmeldung: Deadlift-Only"
     price: "60 €"
     image: "/images/bb26/Deadlift%20Only.webp"
@@ -21,6 +24,7 @@ signups:
     summary: "Deadlift-Only Anmeldung für die offizielle Klasse."
 
   - gate_key: deadlift_only_unofficial
+    signup_path: "/bb26-anmeldung-deadlift-only-unofficial"
     name: "Barbell Battle 2026 Anmeldung: Deadlift-Only (Unofficial)"
     price: "60 €"
     image: "/images/bb26/Deadlift%20inoffiziell.webp"
@@ -28,6 +32,7 @@ signups:
     summary: "Deadlift-Only Anmeldung für die Unofficial-Klasse ohne Singlet."
 
   - gate_key: bench_deadlift
+    signup_path: "/bb26-anmeldung-bench-and-deadlift"
     name: "Barbell Battle 2026 Anmeldung: Bench + Deadlift"
     price: "95 €"
     image: "/images/bb26/bench_dl.webp"
@@ -35,6 +40,7 @@ signups:
     summary: "Kombi-Anmeldung für Bench und Deadlift in der offiziellen Klasse."
 
   - gate_key: bench_deadlift_unofficial
+    signup_path: "/bb26-anmeldung-bench-and-deadlift-unofficial"
     name: "Barbell Battle 2026 Anmeldung: Bench + Deadlift (Unofficial)"
     price: "95 €"
     image: "/images/bb26/bench_dl_unofficial.webp"
@@ -42,6 +48,7 @@ signups:
     summary: "Kombi-Anmeldung für Bench und Deadlift in der Unofficial-Klasse ohne Singlet."
 
   - gate_key: kraftdreikampf
+    signup_path: "/bb26-anmeldung-kraftdreikampf"
     name: "Barbell Battle 2026 Anmeldung: Kraftdreikampf"
     price: "110 €"
     image: "/images/bb26/KDK.webp"
@@ -49,6 +56,7 @@ signups:
     summary: "Kraftdreikampf-Anmeldung mit DOTS-Angabe als Leistungswert."
 
   - gate_key: coach_pass
+    signup_path: "/bb26-anmeldung-coach-pass"
     name: "Barbell Battle 2026 Anmeldung: Coach Pass"
     price: "5 €"
     image: "/images/bb26/coachpass.webp"
