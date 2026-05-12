@@ -1200,6 +1200,20 @@ a.footer-credit:focus-visible {
 .partner-logo img {
   width: 100%;
 }
+.partner-logo.partner-logo-duo {
+  max-width: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.partner-logo.partner-logo-duo img {
+  width: auto;
+  height: 32px;
+}
+.partner-logo.partner-logo-duo .partner-logo-secondary {
+  transform: translateY(3px);
+}
 .partner-content h2 {
   margin-top: 0;
   font-size: 2rem;
@@ -1269,6 +1283,9 @@ a.footer-credit:focus-visible {
   }
   .partner-logo {
     order: 2;
+  }
+  .partner-logo.partner-logo-duo {
+    justify-content: center;
   }
   .partner-content p {
     order: 3;
