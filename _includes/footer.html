@@ -38,9 +38,149 @@
 
   <div class="footer-bottom">
     <p>&copy; {{ site.time | date: '%Y' }} Dominating Barbells.<br> <a href="/imprint">Datenschutz & Impressum</a></p>
-    <a class="section-label footer-credit" rel="noopener noreferrer" target="_blank" href="https://kroener-starke.ch/projekte/">
-      <span class="status-dot" aria-hidden="true"></span>
-      Made by KSWD
+    <a class="footer-credit" rel="noopener noreferrer" target="_blank" href="https://kroener-starke.ch/projekte/" aria-label="Made by: KSWD - Kröner &amp; Starke Web Development">
+      <svg class="footer-credit__orbit" viewBox="0 0 100 32" preserveAspectRatio="none" aria-hidden="true" focusable="false" data-badge-orbit>
+        <path class="footer-credit__orbit-fill" d="M 50 1 H 94 Q 99 1 99 6 V 26 Q 99 31 94 31 H 6 Q 1 31 1 26 V 6 Q 1 1 6 1 H 50" />
+        <path class="footer-credit__orbit-rail" d="M 50 1 H 94 Q 99 1 99 6 V 26 Q 99 31 94 31 H 6 Q 1 31 1 26 V 6 Q 1 1 6 1 H 50" pathLength="100" />
+        <path class="footer-credit__orbit-trace footer-credit__orbit-trace--a" />
+        <path class="footer-credit__orbit-trace footer-credit__orbit-trace--b" />
+      </svg>
+      <span class="footer-credit__core">Made by: <strong>KSWD</strong></span>
     </a>
   </div>
 </footer>
+
+<script>
+  (function () {
+    var prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var orbits = Array.prototype.slice.call(document.querySelectorAll('[data-badge-orbit]'));
+    if (!orbits.length) {
+      return;
+    }
+
+    function normalizeLength(value, fallback) {
+      var parsed = Number.parseFloat(value);
+      return Number.isFinite(parsed) ? parsed : fallback;
+    }
+
+    function normalizeDuration(value, fallback) {
+      var parsed = Number.parseFloat(value);
+      if (!Number.isFinite(parsed)) {
+        return fallback;
+      }
+      return value.trim().endsWith('ms') ? parsed : parsed * 1000;
+    }
+
+    function setupOrbit(orbit) {
+      if (orbit.dataset.orbitReady === 'true') {
+        return;
+      }
+      orbit.dataset.orbitReady = 'true';
+
+      var rail = orbit.querySelector('.footer-credit__orbit-rail');
+      var traces = Array.prototype.slice.call(orbit.querySelectorAll('.footer-credit__orbit-trace'));
+      if (!rail || traces.length < 2 || typeof rail.getTotalLength !== 'function') {
+        return;
+      }
+
+      var badge = orbit.closest('.footer-credit') || orbit;
+      var styles = window.getComputedStyle(badge);
+      var total = rail.getTotalLength();
+      var baseTraceLength = total * (normalizeLength(styles.getPropertyValue('--badge-trace-length'), 8) / 100);
+      var baseOpacity = normalizeLength(styles.getPropertyValue('--badge-trace-opacity'), 0.67);
+      var duration = normalizeDuration(styles.getPropertyValue('--badge-orbit-duration'), 6800);
+      var animationFrame = 0;
+      var lastTimestamp = 0;
+      var distance = 0;
+
+      function pointAt(value) {
+        var normalized = ((value % total) + total) % total;
+        return rail.getPointAtLength(normalized);
+      }
+
+      function sideBiasAt(value) {
+        var phase = (((value / total) % 1) + 1) % 1;
+        var sideBias = Math.sin(phase * Math.PI * 2);
+        return sideBias * sideBias;
+      }
+
+      function getMotionState(value) {
+        var sideBias = sideBiasAt(value);
+        return {
+          length: baseTraceLength * (0.5 + sideBias * 1.5),
+          opacity: Math.min(1, baseOpacity * (1 + sideBias * 0.5)),
+          speed: 0.5 + sideBias * 1.5
+        };
+      }
+
+      function buildTrace(center, length) {
+        var path = '';
+        var steps = Math.max(10, Math.ceil(length / 1.25));
+        var start = center - length / 2;
+        var index;
+        for (index = 0; index <= steps; index += 1) {
+          var point = pointAt(start + (length * index) / steps);
+          path += (index === 0 ? 'M' : 'L') + ' ' + point.x.toFixed(2) + ' ' + point.y.toFixed(2) + ' ';
+        }
+        return path.trim();
+      }
+
+      function draw(value) {
+        var state = getMotionState(value);
+        traces[0].setAttribute('d', buildTrace(value, state.length));
+        traces[1].setAttribute('d', buildTrace(value + total / 2, state.length));
+        traces.forEach(function (trace) {
+          trace.style.opacity = state.opacity.toFixed(3);
+        });
+      }
+
+      draw(0);
+      orbit.classList.add('is-ready');
+      if (prefersReducedMotion) {
+        return;
+      }
+
+      function tick(timestamp) {
+        if (!lastTimestamp) {
+          lastTimestamp = timestamp;
+        }
+        var elapsed = timestamp - lastTimestamp;
+        var state = getMotionState(distance);
+        distance = (distance + (total * elapsed * state.speed) / duration) % total;
+        draw(distance);
+        lastTimestamp = timestamp;
+        animationFrame = window.requestAnimationFrame(tick);
+      }
+
+      animationFrame = window.requestAnimationFrame(tick);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden && animationFrame) {
+          window.cancelAnimationFrame(animationFrame);
+          animationFrame = 0;
+        } else if (!document.hidden && !animationFrame) {
+          lastTimestamp = 0;
+          animationFrame = window.requestAnimationFrame(tick);
+        }
+      });
+    }
+
+    if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+      orbits.forEach(setupOrbit);
+      return;
+    }
+
+    var orbitObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) {
+          return;
+        }
+        setupOrbit(entry.target);
+        orbitObserver.unobserve(entry.target);
+      });
+    }, { rootMargin: '240px 0px', threshold: 0 });
+
+    orbits.forEach(function (orbit) {
+      orbitObserver.observe(orbit);
+    });
+  })();
+</script>
