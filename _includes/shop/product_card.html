@@ -6,8 +6,12 @@
         src="{{ product.card_image }}"
         alt="{{ product.card_image_alt | default: product.name }}"
         class="shop-product-link-card__image"
+        {% if product.card_image_position %}style="object-position: {{ product.card_image_position }};"{% endif %}
       >
       <h3 class="shop-product-link-card__title">{{ product.name }}</h3>
+      {% if product.subtitle %}
+        <p class="shop-product-link-card__subtitle">{{ product.subtitle }}</p>
+      {% endif %}
       <p class="shop-product-link-card__price">{{ product.price }}</p>
       {% if include.show_summary != false and product.summary %}
         <p class="shop-product-link-card__summary">{{ product.summary }}</p>

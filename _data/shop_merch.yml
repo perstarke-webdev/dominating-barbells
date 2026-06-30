@@ -76,6 +76,34 @@ products:
         image_path: "/images/shop/barbell-battle-shirt-2.webp"
         alt: "Barbell Battle 2026 Athlete Shirt Platzhalter Ansicht 2"
 
+  - key: barbell_battle_singlet
+    name: "Barbell Battle Singlet"
+    subtitle: "customized"
+    price: "64,90 €"
+    url: "/shop/barbell-battle-singlet/"
+    card_image: "/images/shop/barbell-battle-singlet-1.webp"
+    card_image_alt: "Barbell Battle Singlet"
+    card_image_position: "center top"
+    summary: "Competition approved Singlet mit exklusivem Barbell Battle Design und optionalem Namen."
+    intro:
+      - "Schaffe dein Battle für die Ewigkeit."
+      - "Jeder Krieger braucht eine Rüstung."
+    highlights:
+      - "Competition Approved."
+      - "Exklusives Barbell Battle Design."
+      - "Dein Name auf dem Singlet."
+    sizes: "XS-3XL"
+    gallery:
+      - url: "/images/shop/barbell-battle-singlet-1.webp"
+        image_path: "/images/shop/barbell-battle-singlet-1.webp"
+        alt: "Barbell Battle Singlet Frontansicht getragen"
+      - url: "/images/shop/barbell-battle-singlet-2.webp"
+        image_path: "/images/shop/barbell-battle-singlet-2.webp"
+        alt: "Barbell Battle Singlet Front- und Rückansicht"
+      - url: "/images/shop/barbell-battle-singlet-3.webp"
+        image_path: "/images/shop/barbell-battle-singlet-3.webp"
+        alt: "Barbell Battle Singlet Rückansicht getragen"
+
   - key: faith_in_strength_hoodie
     name: "Faith in Strength Hoodie"
     price: "69,90 €"
