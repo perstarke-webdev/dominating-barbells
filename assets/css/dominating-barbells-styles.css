@@ -170,11 +170,11 @@ code {
 a.footer-credit,
 a.footer-credit:visited {
     --badge-orbit-duration: 6.8s;
-    --badge-orbit-thickness: 2px;
+    --badge-orbit-thickness: 1px;
     --badge-trace-length: 8;
-    --badge-trace-opacity: 0.72;
-    --badge-gold: #C29D3D;
-    --badge-gold-soft: rgba(194, 157, 61, 0.42);
+    --badge-trace-opacity: 0.67;
+    --badge-rail: #C29D3D;
+    --badge-accent-soft: rgba(194, 157, 61, 0.64);
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -183,16 +183,14 @@ a.footer-credit:visited {
     max-width: 100%;
     padding: 0.24rem;
     border: 0;
-    border-radius: 8px;
+    border-radius: calc(0.52rem - 3px);
     background: transparent;
-    color: #f4efe3 !important;
+    color: oklch(23% 0.028 308) !important;
     text-decoration: none !important;
-    box-shadow: 0 0.45rem 1.3rem -0.65rem rgba(0, 0, 0, 0.72);
+    box-shadow: 0 0.45rem 1.3rem -0.65rem rgba(0, 0, 0, 0.22);
     isolation: isolate;
     overflow: visible;
-    transition:
-        transform 220ms ease,
-        color 220ms ease;
+    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .footer-credit__orbit {
@@ -206,7 +204,7 @@ a.footer-credit:visited {
 }
 
 .footer-credit__orbit-fill {
-    fill: rgba(17, 17, 17, 0.72);
+    fill: oklch(96.2% 0.006 185);
 }
 
 .footer-credit__orbit-rail,
@@ -216,16 +214,16 @@ a.footer-credit:visited {
 }
 
 .footer-credit__orbit-rail {
-    stroke: var(--badge-gold-soft);
-    stroke-width: 2px;
+    stroke: var(--badge-rail);
+    stroke-width: 1px;
 }
 
 .footer-credit__orbit-trace {
-    stroke: var(--badge-gold);
+    stroke: var(--badge-rail);
     stroke-width: var(--badge-orbit-thickness);
     stroke-linecap: round;
     opacity: 0;
-    filter: drop-shadow(0 0 2px rgba(194, 157, 61, 0.34));
+    filter: drop-shadow(0 0 1px var(--badge-accent-soft));
 }
 
 .footer-credit__orbit.is-ready .footer-credit__orbit-trace {
@@ -240,9 +238,9 @@ a.footer-credit:visited {
     gap: 0.24em;
     min-height: 1.32rem;
     padding: 0.24rem 0.88rem;
-    border-radius: 5px;
+    border-radius: max(1px, calc(0.28rem - 3px));
     background: transparent;
-    color: #f4efe3;
+    color: oklch(23% 0.028 308);
     font-size: 0.66rem;
     line-height: 1;
     font-weight: 500;
@@ -252,13 +250,12 @@ a.footer-credit:visited {
 }
 
 .footer-credit__core strong {
-    font-weight: 650;
+    font-weight: 600;
 }
 
 a.footer-credit:hover,
 a.footer-credit:focus-visible {
     transform: translateY(-2px);
-    color: #ffffff !important;
     text-decoration: none !important;
 }
 
