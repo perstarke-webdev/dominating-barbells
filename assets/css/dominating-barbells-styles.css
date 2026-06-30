@@ -20,6 +20,16 @@ div.box {
     color: #C29D3D;
 }
 
+:root {
+    --color-paper: oklch(96.2% 0.006 185);
+    --color-graphite: oklch(23% 0.028 308);
+    --color-ink: oklch(25% 0.035 248);
+    --color-badge-accent-soft: rgba(194, 157, 61, 0.64);
+    --color-black-22: rgba(0, 0, 0, 0.22);
+    --duration-base: 320ms;
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
 
 
 /**
@@ -158,42 +168,42 @@ code {
     margin-top: 2rem;
 }
 
-.footer-bottom a {
+.footer-bottom p {
+    margin-bottom: 1.6rem;
+}
+
+.footer-bottom a:not(.site-footer__badge) {
     color: #C29D3D !important;
     text-decoration: none;
 }
 
-.footer-bottom a:hover {
+.footer-bottom a:not(.site-footer__badge):hover {
     text-decoration: underline;
 }
 
-a.footer-credit,
-a.footer-credit:visited {
+/* Made-by badge — inspired by 8man, signature PSWD detail */
+.site-footer__badge {
     --badge-orbit-duration: 6.8s;
-    --badge-orbit-thickness: 1px;
+    --badge-orbit-thickness: 2px;
     --badge-trace-length: 8;
     --badge-trace-opacity: 0.67;
-    --badge-rail: #C29D3D;
-    --badge-accent-soft: rgba(194, 157, 61, 0.64);
+    --badge-rail: color-mix(in srgb, var(--color-paper) 90%, var(--color-ink) 10%);
     position: relative;
     display: inline-flex;
+    justify-self: start;
     align-items: center;
-    width: fit-content;
-    margin: 0.75rem auto 0;
+    width: max-content;
     max-width: 100%;
     padding: 0.24rem;
     border: 0;
     border-radius: calc(0.52rem - 3px);
     background: transparent;
-    color: oklch(23% 0.028 308) !important;
-    text-decoration: none !important;
-    box-shadow: 0 0.45rem 1.3rem -0.65rem rgba(0, 0, 0, 0.22);
+    box-shadow: 0 0.45rem 1.3rem -0.65rem var(--color-black-22);
     isolation: isolate;
     overflow: visible;
-    transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+    transition: transform var(--duration-base) var(--ease-out);
 }
-
-.footer-credit__orbit {
+.site-footer__badge-orbit {
     position: absolute;
     inset: 0;
     z-index: 1;
@@ -202,61 +212,57 @@ a.footer-credit:visited {
     overflow: visible;
     pointer-events: none;
 }
-
-.footer-credit__orbit-fill {
-    fill: oklch(96.2% 0.006 185);
+.site-footer__badge-orbit-fill {
+    fill: var(--color-paper);
 }
-
-.footer-credit__orbit-rail,
-.footer-credit__orbit-trace {
+.site-footer__badge-orbit-rail,
+.site-footer__badge-orbit-trace {
     fill: none;
     vector-effect: non-scaling-stroke;
 }
-
-.footer-credit__orbit-rail {
+.site-footer__badge-orbit-rail {
     stroke: var(--badge-rail);
-    stroke-width: 1px;
+    stroke-width: 2px;
 }
-
-.footer-credit__orbit-trace {
-    stroke: var(--badge-rail);
+.site-footer__badge-orbit-trace {
+    stroke: #C29D3D;
     stroke-width: var(--badge-orbit-thickness);
     stroke-linecap: round;
     opacity: 0;
-    filter: drop-shadow(0 0 1px var(--badge-accent-soft));
+    filter: drop-shadow(0 0 1px var(--color-badge-accent-soft));
 }
-
-.footer-credit__orbit.is-ready .footer-credit__orbit-trace {
+.site-footer__badge-orbit.is-ready .site-footer__badge-orbit-trace {
     opacity: var(--badge-trace-opacity);
 }
-
-.footer-credit__core {
+.site-footer__badge-core {
     position: relative;
     z-index: 2;
     display: inline-flex;
     align-items: center;
     gap: 0.24em;
-    min-height: 1.32rem;
+    min-height: 1.14rem;
     padding: 0.24rem 0.88rem;
     border-radius: max(1px, calc(0.28rem - 3px));
     background: transparent;
-    color: oklch(23% 0.028 308);
+    color: var(--color-graphite);
     font-size: 0.66rem;
     line-height: 1;
-    font-weight: 500;
     letter-spacing: 0.035em;
+    font-weight: 500;
     text-transform: none;
     white-space: nowrap;
 }
-
-.footer-credit__core strong {
+.site-footer__badge-core strong {
     font-weight: 600;
 }
-
-a.footer-credit:hover,
-a.footer-credit:focus-visible {
+.site-footer__badge:hover,
+.site-footer__badge:focus-visible {
     transform: translateY(-2px);
     text-decoration: none !important;
+}
+
+@media (min-width: 860px) {
+    .site-footer__badge { justify-self: end; }
 }
 
 /* Responsive Styles */
