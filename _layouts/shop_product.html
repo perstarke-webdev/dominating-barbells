@@ -14,6 +14,9 @@ layout: default
     <header class="shop-product-layout-hero">
       <p class="shop-product-layout-hero__kicker">Dominating Barbells Shop</p>
       <h1 class="shop-product-layout-hero__title">{{ page.title }}</h1>
+      {% if product and product.subtitle %}
+        <p class="shop-product-layout-hero__subtitle">{{ product.subtitle }}</p>
+      {% endif %}
       {% if product and product.price %}
         <p class="shop-product-layout-hero__price">{{ product.price }}</p>
       {% endif %}
