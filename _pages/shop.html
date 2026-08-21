@@ -14,6 +14,25 @@ excerpt: "**Wettkampf-Anmeldung Powerlifting & Sportbekleidung**"
 
   <h1 class="home-heading-one">Jetzt anmelden, ausstatten & durchstarten!</h1>
 
+  {% assign coach_pass_signup = site.data.shop_competition_signups.signups | where: "gate_key", "coach_pass" | first %}
+  {% if coach_pass_signup %}
+    <br>
+    <hr>
+
+    <section id="wettkaempfe-preview" class="small-top-margin shop-section">
+      <h1 class="shop-heading">Wettkampf-Anmeldung</h1>
+
+      <div class="shop-grid">
+        <div class="product-button-wrapper">
+          {% include shop/competition_signup_card.html signup=coach_pass_signup %}
+        </div>
+      </div>
+    </section>
+
+    <br>
+    <hr>
+  {% endif %}
+
   <section id="merch" class="shop-section">
     <h1 class="shop-heading">Sportbekleidung Fitness & Powerlifting</h1>
 
