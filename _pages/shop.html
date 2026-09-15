@@ -15,17 +15,25 @@ excerpt: "**Wettkampf-Anmeldung Powerlifting & Sportbekleidung**"
   <h1 class="home-heading-one">Jetzt anmelden, ausstatten & durchstarten!</h1>
 
   {% assign coach_pass_signup = site.data.shop_competition_signups.signups | where: "gate_key", "coach_pass" | first %}
-  {% if coach_pass_signup %}
+  {% assign massage = site.data.massage.teaser %}
+  {% if coach_pass_signup or massage %}
     <br>
     <hr>
 
     <section id="wettkaempfe-preview" class="small-top-margin shop-section">
-      <h1 class="shop-heading">Wettkampf-Anmeldung</h1>
+      <h1 class="shop-heading">Barbell Battle 2026 &ndash; Anmeldung &amp; Buchung</h1>
 
       <div class="shop-grid">
-        <div class="product-button-wrapper">
-          {% include shop/competition_signup_card.html signup=coach_pass_signup %}
-        </div>
+        {% if coach_pass_signup %}
+          <div class="product-button-wrapper">
+            {% include shop/competition_signup_card.html signup=coach_pass_signup %}
+          </div>
+        {% endif %}
+        {% if massage %}
+          <div class="product-button-wrapper" id="product-massage">
+            {% include shop/product_card.html product=massage cta="Termin buchen" %}
+          </div>
+        {% endif %}
       </div>
     </section>
 

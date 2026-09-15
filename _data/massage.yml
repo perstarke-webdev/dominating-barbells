@@ -1,0 +1,46 @@
+# Massage-Angebot beim Barbell Battle 2026.
+# Gebucht wird ueber Cal.com (Account "massagen"), bezahlt wird vor Ort.
+# Das Kartenbild ist ein Platzhalter im BB26-Stil und wird ersetzt,
+# sobald ein echtes Foto der Masseurin vorliegt.
+
+teaser:
+  key: massage_barbell_battle
+  name: "Massage beim Barbell Battle 2026"
+  subtitle: "Freitag & Samstag vor Ort"
+  price: "ab 50 €"
+  url: "/shop/massage-barbell-battle/"
+  card_image: "/images/bb26/massage.webp"
+  card_image_alt: "Massage beim Barbell Battle 2026"
+  summary: "Sportmassage direkt am Wettkampfwochenende in der K2 Power Base. 30 oder 45 Minuten, Termin vorab online sichern."
+
+intro:
+  - "Beim Barbell Battle 2026 gibt es Massagen direkt vor Ort in der K2 Power Base Isny."
+  - "Ob zum Lockern vor dem ersten Versuch oder zur Regeneration nach dem Wettkampf: Sichere dir deinen Termin vorab online, die Plätze sind begrenzt."
+
+practitioner_heading: "Deine Masseurin"
+practitioner:
+  - "Sportmasseurin"
+  - "Ayurveda-Masseurin"
+  - "Heilpraktikerin"
+
+dates_heading: "Termine vor Ort"
+dates:
+  - "Freitag, 9. Oktober 2026 — 8:00 bis 17:00 Uhr"
+  - "Samstag, 10. Oktober 2026 — 8:00 bis 16:00 Uhr"
+
+location: "K2 Power Base, Neutrauchburger Straße, Isny im Allgäu"
+
+booking_heading: "Termin buchen"
+payment_note: "Die Bezahlung erfolgt vor Ort — in bar oder per PayPal."
+
+options:
+  - name: "45 Minuten"
+    price: "65 €"
+    summary: "Der längere Termin mit mehr Zeit für die Behandlung."
+    cal_link: "massagen/45min"
+    url: "https://cal.com/massagen/45min"
+  - name: "30 Minuten"
+    price: "50 €"
+    summary: "Der kompakte Termin, wenn es zwischendurch schnell gehen muss."
+    cal_link: "massagen/30min"
+    url: "https://cal.com/massagen/30min"

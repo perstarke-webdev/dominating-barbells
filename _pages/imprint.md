@@ -84,6 +84,14 @@ Weitere Informationen dazu finden Sie hier:
 🔗 [Formspree Datenschutzerklärung](https://formspree.io/legal/privacy-policy)
 🔗 [Shopify Datenschutzerklärung](https://www.shopify.de/legal/datenschutz)
 
+#### Terminbuchung über Cal.com
+
+Für die Buchung von Massageterminen nutzen wir den Dienst **Cal.com** (Cal.com, Inc.). Das Buchungsfenster wird erst geladen, wenn du aktiv auf einen Buchungs-Button klickst — vorher werden keine Daten an Cal.com übertragen.
+
+Beim Buchen werden die von dir eingegebenen Daten (z. B. Name, E-Mail-Adresse und der gewählte Termin) an Cal.com übermittelt und dort verarbeitet. Die Verarbeitung dient ausschließlich der Abwicklung deiner Terminbuchung. Die Bezahlung der Massage erfolgt vor Ort und läuft nicht über Cal.com.
+
+🔗 [Cal.com Datenschutzerklärung](https://cal.com/privacy)
+
 
 #### Widerruf, Änderungen, Berichtigungen und Aktualisierungen
 Der Nutzer hat das Recht, auf Antrag unentgeltlich Auskunft zu erhalten über die personenbezogenen Daten, die über ihn gespeichert wurden. Zusätzlich hat der Nutzer das Recht auf Berichtigung unrichtiger Daten, Sperrung und Löschung seiner personenbezogenen Daten, soweit dem keine gesetzliche Aufbewahrungspflicht entgegensteht.<br />

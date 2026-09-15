@@ -877,6 +877,27 @@ code {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.shop-product-gallery-existing--1 {
+    grid-template-columns: minmax(0, 420px);
+    justify-content: center;
+}
+
+.shop-massage-booking {
+    margin-top: 2.4rem;
+}
+
+.massage-option-card .shop-product-link-card__inner {
+    align-items: flex-start;
+}
+
+.massage-option-card .shop-product-link-card__title {
+    font-size: 1.45rem;
+}
+
+.massage-option-card .shop-product-link-card__cta {
+    margin-top: auto;
+}
+
 .shop-product-details {
     margin-top: 1.4rem;
     padding: 1.2rem 1.15rem;

@@ -2,7 +2,17 @@
 layout: default
 ---
 
-{% assign product = site.data.shop_merch.products | where: "key", page.product_key | first %}
+{% comment %}
+  Ohne product_key darf hier nichts nachgeschlagen werden: "where" mit einem
+  leeren Wert liefert sonst das erste Merch-Produkt und damit einen falschen
+  Preis. Seiten ohne Merch-Produkt setzen subtitle/price direkt im Front Matter.
+{% endcomment %}
+{% if page.product_key %}
+  {% assign product = site.data.shop_merch.products | where: "key", page.product_key | first %}
+{% endif %}
+
+{% assign hero_subtitle = page.subtitle | default: product.subtitle %}
+{% assign hero_price = page.price | default: product.price %}
 
 <div id="main" role="main">
   <article class="splash shop-product-layout" itemscope itemtype="https://schema.org/CreativeWork">
@@ -14,11 +24,11 @@ layout: default
     <header class="shop-product-layout-hero">
       <p class="shop-product-layout-hero__kicker">Dominating Barbells Shop</p>
       <h1 class="shop-product-layout-hero__title">{{ page.title }}</h1>
-      {% if product and product.subtitle %}
-        <p class="shop-product-layout-hero__subtitle">{{ product.subtitle }}</p>
+      {% if hero_subtitle %}
+        <p class="shop-product-layout-hero__subtitle">{{ hero_subtitle }}</p>
       {% endif %}
-      {% if product and product.price %}
-        <p class="shop-product-layout-hero__price">{{ product.price }}</p>
+      {% if hero_price %}
+        <p class="shop-product-layout-hero__price">{{ hero_price }}</p>
       {% endif %}
     </header>
 

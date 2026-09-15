@@ -1,0 +1,76 @@
+{% assign massage = site.data.massage %}
+{% if massage %}
+  <script src="/assets/js/cal-booking.js" defer></script>
+
+  <section class="shop-product-page">
+    <div class="shop-product-page__back-link">
+      <a href="/shop/#wettkaempfe-preview" class="btn btn--light-outline btn--small">Zurück zum Shop</a>
+    </div>
+
+    {% assign massage_image = massage.teaser.card_image %}
+    {% if massage_image %}
+      <section class="shop-product-gallery-full" aria-label="Massage beim Barbell Battle 2026">
+        <figure class="shop-product-gallery-existing shop-product-gallery-existing--1 shop-product-gallery-existing--square">
+          <img src="{{ massage_image }}" alt="{{ massage.teaser.card_image_alt | default: massage.teaser.name }}">
+        </figure>
+      </section>
+    {% endif %}
+
+    <section class="shop-product-details">
+      {% for line in massage.intro %}
+        <p class="shop-product-details__intro">{{ line }}</p>
+      {% endfor %}
+
+      {% if massage.practitioner %}
+        <h2 class="shop-product-details__heading">{{ massage.practitioner_heading | default: "Deine Masseurin" }}</h2>
+        <ul class="shop-product-details__list">
+          {% for qualification in massage.practitioner %}
+            <li>{{ qualification }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if massage.dates %}
+        <h2 class="shop-product-details__heading">{{ massage.dates_heading | default: "Termine vor Ort" }}</h2>
+        <ul class="shop-product-details__list">
+          {% for date in massage.dates %}
+            <li>{{ date }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if massage.location %}
+        <p class="shop-product-details__sizes">{{ massage.location }}</p>
+      {% endif %}
+    </section>
+
+    <section class="shop-massage-booking" aria-label="{{ massage.booking_heading | default: 'Termin buchen' }}">
+      <h2 class="shop-recommended-products__title">{{ massage.booking_heading | default: "Termin buchen" }}</h2>
+
+      <div class="shop-grid">
+        {% for option in massage.options %}
+          <div class="product-button-wrapper">
+            <article class="shop-product-link-card massage-option-card">
+              <a class="shop-product-link-card__inner"
+                 href="{{ option.url }}"
+                 data-booking-cal-link="{{ option.cal_link }}"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                <h3 class="shop-product-link-card__title">{{ option.name }}</h3>
+                <p class="shop-product-link-card__price">{{ option.price }}</p>
+                {% if option.summary %}
+                  <p class="shop-product-link-card__summary">{{ option.summary }}</p>
+                {% endif %}
+                <span class="btn btn--primary btn--small shop-product-link-card__cta">Termin buchen</span>
+              </a>
+            </article>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if massage.payment_note %}
+        <p class="product-note product-note--warning">{{ massage.payment_note }}</p>
+      {% endif %}
+    </section>
+  </section>
+{% endif %}
